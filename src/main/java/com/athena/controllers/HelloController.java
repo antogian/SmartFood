@@ -10,7 +10,7 @@ public class HelloController
     @RequestMapping("/")
     public String hello(Model model)
     {
-        model.addAttribute("welcome", "This means it works just fine.");
+        model.addAttribute("welcome", "This means it works just fine..");
         return "hello";
     }
 }
