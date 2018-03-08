@@ -12,7 +12,7 @@ public class FoodCollection implements Serializable {
 
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int foodId;
+    private String foodId;
 
 //    @Column(name = "name")
     private String name;
@@ -23,14 +23,14 @@ public class FoodCollection implements Serializable {
 //    @Column(name = "price")
     private Double price;
 
-    public FoodCollection(int foodId, String name, String description, Double price) {
+    public FoodCollection(String foodId, String name, String description, Double price) {
         this.foodId = foodId;
         this.name = name;
         this.description = description;
         this.price = price;
     }
 
-    public int getFoodId() {
+    public String getFoodId() {
         return foodId;
     }
 

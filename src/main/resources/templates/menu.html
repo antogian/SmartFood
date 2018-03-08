@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MENU</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <hr />
+        <div class="row" th:each="food : ${foods}">
+            <div class="col-sm" >
+                <b th:text="${food.name}"></b>
+            </div>
+            <div class="col-sm">
+                <i th:text="${food.description}"> </i>
+            </div>
+            <div class="col-sm" th:text="${food.price} + '$'" />
+            <div class="col-sm">
+                <a th:href="@{|/addItem?code=${food.foodId}|}"> Add to bucket</a>
+            </div>
+            <br />
+        </div>
+        <div class="fixed-bottom">
+            <div class="row" th:switch="${totalItems}">
+                <button th:case="0" type="button" class="btn-block" disabled="true">
+                    <b>PROCEED TO CHECKOUT</b>
+                    <br />
+                    <i><span>0 items in bucket</span></i>
+                </button>
+                <button th:case="1" type="button" class="btn-block" onclick="location.href='/bucket.html'" >
+                    <b>PROCEED TO CHECKOUT</b>
+                    <br />
+                    <i><span>1 item in bucket</span></i>
+                </button>
+                <button th:case="*" type="button" class="btn-block" onclick="location.href='/bucket.html'" >
+                    <b>PROCEED TO CHECKOUT</b>
+                    <br />
+                    <i><span th:text="${totalItems} + ' items in bucket'"></span></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- <script th:src="@{/js/items_counter.js}"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
