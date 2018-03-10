@@ -1,4 +1,4 @@
-package com.athena.model.entities;
+package com.athena.entities;
 
 
 //import javax.persistence.*;

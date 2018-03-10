@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <hr />
-        <div class="row" th:each="food : ${foods}">
+        <div class="row" th:each="food : ${menu}">
             <div class="col-sm" >
                 <b th:text="${food.name}"></b>
             </div>
