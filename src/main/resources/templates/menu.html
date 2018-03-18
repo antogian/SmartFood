@@ -3,47 +3,88 @@
 <head>
     <title>MENU</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 </head>
 <body>
-    <div class="container">
-        <hr />
-        <div class="row" th:each="food : ${menu}">
-            <div class="col-sm" >
-                <b th:text="${food.name}"></b>
+
+<nav class="navbar navbar-default"> </nav>
+<nav class="navbar navbar-default"> </nav>
+<nav class="navbar navbar-default"> </nav>
+<nav class="navbar navbar-default"> </nav>
+<nav class="navbar navbar-default"> </nav>
+
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="/home">Smart Restaurant</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/home">Home</a>
+                <a class="nav-item nav-link active" href="/menu">Order Online<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link disabled">About</a>
             </div>
-            <div class="col-sm">
-                <i th:text="${food.description}"> </i>
-            </div>
-            <div class="col-sm" th:text="${food.price} + '$'" />
-            <div class="col-sm">
-                <a th:href="@{|/addItem?code=${food.foodId}|}"> Add to bucket</a>
-            </div>
-            <br />
         </div>
-        <div class="fixed-bottom">
-            <div class="row" th:switch="${totalItems}">
-                <button th:case="0" type="button" class="btn-block" disabled="true">
-                    <b>PROCEED TO CHECKOUT</b>
-                    <br />
-                    <i><span>0 items in bucket</span></i>
-                </button>
-                <button th:case="1" type="button" class="btn-block" onclick="location.href='/bucket.html'" >
-                    <b>PROCEED TO CHECKOUT</b>
-                    <br />
-                    <i><span>1 item in bucket</span></i>
-                </button>
-                <button th:case="*" type="button" class="btn-block" onclick="location.href='/bucket.html'" >
-                    <b>PROCEED TO CHECKOUT</b>
-                    <br />
-                    <i><span th:text="${totalItems} + ' items in bucket'"></span></i>
-                </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <div class="nav-item text-white">Delivery Active Hours: 12:00 - 00:00</div>
+            </div>
+        </div>
+    </nav>
+</div><!-- navbar-nav -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-sm-10 push-sm-5" th:each="food : ${menu}">
+        <div class="list-group">
+            <a th:href="@{|/addItem?code=${food.foodId}|}" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1" th:text="${food.name}"></h5>
+                    <small th:text="${food.price} + '$'"></small>
+                </div>
+                <p class="mb-1" th:text="${food.description}"></p>
+                <small class="text-muted">Additional Comments.</small>
+            </a>
+        </div>
+        </div>
+    </div>
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+    <div>
+        <div class="row" th:switch="${totalItems}">
+            <div class="col-12">
+            <button th:case="0" type="button" class="btn-block" disabled="true">
+                <b>PROCEED TO CHECKOUT</b>
+                <br />
+                <i><span>0 items in bucket</span></i>
+            </button>
+            <button th:case="1" type="button" class="btn-block" onclick="location.href='/bucket.html'" >
+                <b>PROCEED TO CHECKOUT</b>
+                <br />
+                <i><span>1 item in bucket</span></i>
+            </button>
+            <button th:case="*" type="button" class="btn-block" onclick="location.href='/bucket.html'" >
+                <b>PROCEED TO CHECKOUT</b>
+                <br />
+                <i><span th:text="${totalItems} + ' items in bucket'"></span></i>
+            </button>
             </div>
         </div>
     </div>
-    <!-- <script th:src="@{/js/items_counter.js}"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</div>
+<!-- <script th:src="@{/js/items_counter.js}"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 </html>
