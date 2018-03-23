@@ -7,13 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 </head>
-<body>
-
-<nav class="navbar navbar-default"> </nav>
-<nav class="navbar navbar-default"> </nav>
-<nav class="navbar navbar-default"> </nav>
-<nav class="navbar navbar-default"> </nav>
-<nav class="navbar navbar-default"> </nav>
+<body data-spy="scroll" data-target="#menu" data-offset="60">
 
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
@@ -37,25 +31,60 @@
     </nav>
 </div><!-- navbar-nav -->
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-4 col-sm-10 push-sm-5" th:each="food : ${menu}">
-        <div class="list-group">
-            <a th:href="@{|/addItem?code=${food.foodId}|}" class="list-group-item list-group-item-action flex-column align-items-start">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1" th:text="${food.name}"></h5>
-                    <small th:text="${food.price} + '$'"></small>
+<div class="container-fluid bg-secondary">
+    <div class="jumbotron bg-light">
+        <div class="row">
+            <div class="col-lg-2">
+                <nav class="d-none d-lg-block" id="menu">
+                    <aside style="position: fixed">
+                        <hr />
+                        <h1 class="h4">MENU</h1>
+                        <hr />
+                        <ul class="nav nav-pills flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#PIZZA">PIZZA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#BURGER">BURGERS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#DRINKS">DRINKS</a>
+                            </li>
+                        </ul>
+                    </aside>
+                </nav>
+            </div>
+            <section class="col-lg-8 col-12">
+                <div th:each="menu : ${allMenus}">
+                    <hr th:id="${menu.name}" />
+                    <h1 class="h5" th:text="${menu.name}"></h1>
+                    <hr />
+                    <div class="col-sm-12" th:each="product : ${menu.productList}">
+                        <div class="list-group">
+                        <a th:href="@{|/addItem?code=${product.productId}|}" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1" th:text="${product.name}"></h5>
+                                <small th:text="${product.price} + '$'"></small>
+                            </div>
+                            <p class="mb-1" th:text="${product.description}"></p>
+                            <small class="text-muted">Additional Comments.</small>
+                        </a>
+                        </div>
+                    </div>
                 </div>
-                <p class="mb-1" th:text="${food.description}"></p>
-                <small class="text-muted">Additional Comments.</small>
-            </a>
-        </div>
+            </section>
+            <aside class="col-lg-2">
+                <div class="d-none d-lg-block">
+                    <div> HERE </div>
+                    <div> WIL BE THE </div>
+                    <div> SHOPPING CART </div>
+                </div>
+            </aside>
         </div>
     </div>
     <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
-    <div>
         <div class="row" th:switch="${totalItems}">
-            <div class="col-12">
+            <div class="col-12 fixed-bottom">
             <button th:case="0" type="button" class="btn-block" disabled="true">
                 <b>PROCEED TO CHECKOUT</b>
                 <br />
@@ -73,7 +102,6 @@
             </button>
             </div>
         </div>
-    </div>
 </div>
 <!-- <script th:src="@{/js/items_counter.js}"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

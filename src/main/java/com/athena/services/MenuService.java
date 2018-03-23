@@ -1,7 +1,8 @@
 package com.athena.services;
 
 import com.athena.dao.MenuDAO;
-import com.athena.entities.FoodCollection;
+import com.athena.entities.Menu;
+import com.athena.entities.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,9 +16,9 @@ public class MenuService
 
     public MenuService() { }
 
-    public List<FoodCollection> getMenu()
+    public List<Menu> getAllMenus()
     {
-        return menuDao.getMenu();
+        return menuDao.getAllMenus();
     }
 
 }

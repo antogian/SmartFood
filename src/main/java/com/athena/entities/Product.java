@@ -1,18 +1,17 @@
 package com.athena.entities;
 
-
 //import javax.persistence.*;
 import java.io.Serializable;
 
 //@Entity
 //@Table(name="food_collection")
 //@EnableAutoConfiguration(exclude=DataSourceAutoConfiguration.class)
-public class FoodCollection implements Serializable {
+public class Product implements Serializable {
 
 
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String foodId;
+    private String productId;
 
 //    @Column(name = "name")
     private String name;
@@ -23,15 +22,24 @@ public class FoodCollection implements Serializable {
 //    @Column(name = "price")
     private Double price;
 
-    public FoodCollection(String foodId, String name, String description, Double price) {
-        this.foodId = foodId;
+    public Product()
+    {
+        this.productId = "";
+        this.name = "";
+        this.description = "";
+        this.price = 0.0;
+    }
+
+    public Product(String productId, String name, String description, Double price)
+    {
+        this.productId = productId;
         this.name = name;
         this.description = description;
         this.price = price;
     }
 
-    public String getFoodId() {
-        return foodId;
+    public String getProductId() {
+        return productId;
     }
 
     public String getName() {
