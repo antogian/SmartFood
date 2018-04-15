@@ -28,36 +28,52 @@ public class MenuDAO
         allPizza.add(new Product("8", "Ice-cream", description, 0.99));
         allPizza.add(new Product("9", "Souvlaki", description, 3.99)); */
 
-        List<Product> allPizzas = new ArrayList<Product>();
+
         String description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                 "In quis arcu tristique, luctus risus ac, imperdiet velit. " +
                 "Maecenas fermentum felis quis laoreet tristique.";
-        allPizzas.add(new Product("11", "Neapolitan Pizza", description, 6.99));
-        allPizzas.add(new Product("12", "Chicago Pizza", description, 7.99));
-        allPizzas.add(new Product("13", "New York Pizza", description, 5.99));
-        allPizzas.add(new Product("14", "Sicilian Pizza", description, 8.99));
-        allPizzas.add(new Product("15", "Greek Pizza", description, 9.99));
-        allPizzas.add(new Product("16", "California Pizza", description, 5.99));
+        List<Product> allPizzas = new ArrayList<Product>();
+        List<String> pizzaToppings = new ArrayList<String>();
+        pizzaToppings.add("pepper");
+        pizzaToppings.add("olive");
+        pizzaToppings.add("bacon");
+        pizzaToppings.add("chicken");
+        pizzaToppings.add("extra cheese");
+        pizzaToppings.add("barbeque");
+        pizzaToppings.add("salami");
+        pizzaToppings.add("feta");
+        allPizzas.add(new Product("11", "Neapolitan Pizza", description, 6.99, pizzaToppings));
+        allPizzas.add(new Product("12", "Chicago Pizza", description, 7.99, pizzaToppings));
+        allPizzas.add(new Product("13", "New York Pizza", description, 5.99, pizzaToppings));
+        allPizzas.add(new Product("14", "Sicilian Pizza", description, 8.99, pizzaToppings));
+        allPizzas.add(new Product("15", "Greek Pizza", description, 9.99, pizzaToppings));
+        allPizzas.add(new Product("16", "California Pizza", description, 5.99, pizzaToppings));
         Menu pizzaMenu = new Menu();
         pizzaMenu.setName("PIZZA");
         pizzaMenu.setProductList(allPizzas);
 
         List<Product> allBurgers = new ArrayList<Product>();
-        allBurgers.add(new Product("21", "Hamburger", description, 6.99));
-        allBurgers.add(new Product("22", "Cheeseburger", description, 7.99));
-        allBurgers.add(new Product("23", "Barbecue burger", description, 5.99));
-        allBurgers.add(new Product("24", "Chili burger", description, 8.99));
-        allBurgers.add(new Product("25", "Veggie burger", description, 9.99));
+        List<String> burgerToppings = new ArrayList<String>();
+        burgerToppings.add("pepper");
+        burgerToppings.add("olive");
+        burgerToppings.add("ketchup");
+        burgerToppings.add("mustard");
+        burgerToppings.add("mayonese");
+        allBurgers.add(new Product("21", "Hamburger", description, 6.99, burgerToppings));
+        allBurgers.add(new Product("22", "Cheeseburger", description, 7.99, burgerToppings));
+        allBurgers.add(new Product("23", "Barbecue burger", description, 5.99, burgerToppings));
+        allBurgers.add(new Product("24", "Chili burger", description, 8.99, burgerToppings));
+        allBurgers.add(new Product("25", "Veggie burger", description, 9.99, burgerToppings));
         Menu burgerMenu = new Menu();
         burgerMenu.setName("BURGER");
         burgerMenu.setProductList(allBurgers);
 
         List<Product> allDrinks = new ArrayList<Product>();
-        allDrinks.add(new Product("31", "Coca-Cola", description, 6.99));
-        allDrinks.add(new Product("32", "Pepsi", description, 7.99));
-        allDrinks.add(new Product("33", "Soda", description, 5.99));
-        allDrinks.add(new Product("34", "Red Bull", description, 8.99));
-        allDrinks.add(new Product("35", "Water", description, 9.99));
+        allDrinks.add(new Product("31", "Coca-Cola", description, 6.99, new ArrayList<String>()));
+        allDrinks.add(new Product("32", "Pepsi", description, 7.99, new ArrayList<String>()));
+        allDrinks.add(new Product("33", "Soda", description, 5.99, new ArrayList<String>()));
+        allDrinks.add(new Product("34", "Red Bull", description, 8.99, new ArrayList<String>()));
+        allDrinks.add(new Product("35", "Water", description, 9.99, new ArrayList<String>()));
         Menu drinksMenu = new Menu();
         drinksMenu.setName("DRINKS");
         drinksMenu.setProductList(allDrinks);

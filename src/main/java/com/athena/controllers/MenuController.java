@@ -6,7 +6,9 @@ import com.athena.services.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
@@ -28,13 +30,28 @@ public class MenuController
         bucket = new ArrayList<Product>();
     }
 
+    private Product getProductById(String id)
+    {
+        for(int i = 0; i<allMenus.size(); i++)
+        {
+            for(int j=0; j<allMenus.get(i).getProductList().size(); j++)
+            {
+                if (allMenus.get(i).getProductList().get(j).getId().equals(id))
+                {
+                    return allMenus.get(i).getProductList().get(j);
+                }
+            }
+        }
+        return new Product();
+    }
+
     private void addItemToBucket(String id)
     {
         for(int i = 0; i<allMenus.size(); i++)
         {
             for(int j=0; j<allMenus.get(i).getProductList().size(); j++)
             {
-                if (allMenus.get(i).getProductList().get(j).getProductId().equals(id))
+                if (allMenus.get(i).getProductList().get(j).getId().equals(id))
                 {
                     bucket.add(allMenus.get(i).getProductList().get(j));
                     return;
@@ -43,11 +60,16 @@ public class MenuController
         }
     }
 
+    private void addItemToBucket(Product item)
+    {
+        bucket.add(item);
+    }
+
     private void removeItemFromBucket(String id)
     {
         for(int i = 0; i< bucket.size(); i++)
         {
-            if (bucket.get(i).getProductId().equals(id))
+            if (bucket.get(i).getId().equals(id))
             {
                 bucket.remove(i);
                 return;
@@ -64,7 +86,9 @@ public class MenuController
             //populateFeed();
         }
         model.addAttribute("allMenus", allMenus);
+        model.addAttribute("bucket", bucket);
         model.addAttribute("totalItems", bucket.size());
+        model.addAttribute("selectedProduct", new Product());
 
         return "menu";
     }
@@ -79,7 +103,17 @@ public class MenuController
         model.addAttribute("bucket", bucket);
         model.addAttribute("totalItems", bucket.size());
 
-        return "bucket";
+        return "menu";
+    }
+
+    @RequestMapping(value="/addItemToCart", method=RequestMethod.POST)
+    public String addItemToCart(@RequestParam("productID") String id, @RequestParam("checkedToppings") List<String> toppings)
+    {
+        Product newItem = getProductById(id);
+        newItem.setSelectedToppings(toppings);
+        addItemToBucket(newItem);
+
+        return "redirect:/menu";
     }
 
     @RequestMapping({"/addItem"})
@@ -95,7 +129,21 @@ public class MenuController
     {
         removeItemFromBucket(code);
 
-        return "redirect:/bucket";
+        return "redirect:/menu";
+    }
+
+    @RequestMapping("/experiments")
+    public String experiments(Model model)
+    {
+        if(allMenus == null && bucket == null)
+        {
+            initializeFeed();
+            //populateFeed();
+        }
+        model.addAttribute("allMenus", allMenus);
+        model.addAttribute("totalItems", bucket.size());
+
+        return "experiments";
     }
 
 }

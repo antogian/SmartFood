@@ -1,60 +1,66 @@
 package com.athena.entities;
 
-//import javax.persistence.*;
-import java.io.Serializable;
-
-//@Entity
-//@Table(name="food_collection")
-//@EnableAutoConfiguration(exclude=DataSourceAutoConfiguration.class)
-public class Product implements Serializable {
+import java.util.ArrayList;
+import java.util.List;
 
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String productId;
-
-//    @Column(name = "name")
+public class Product
+{
+    private String id;
     private String name;
-
-//    @Column(name = "description")
     private String description;
-
-//    @Column(name = "price")
     private Double price;
+    private List<String> toppings;
+
+    private List<String> selectedToppings;
 
     public Product()
     {
-        this.productId = "";
+        this.id = "";
         this.name = "";
         this.description = "";
         this.price = 0.0;
+        this.toppings = new ArrayList<String>();
+        this.selectedToppings = new ArrayList<String>();
     }
 
-    public Product(String productId, String name, String description, Double price)
+    public Product(String id, String name, String description, Double price, List<String> toppings)
     {
-        this.productId = productId;
+        this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
+        this.toppings = toppings;
+        this.selectedToppings = new ArrayList<String>();
     }
 
-    public String getProductId() {
-        return productId;
+    public void setId(String id)
+    {
+        this.id = id;
     }
 
-    public String getName() {
+    public String getId()
+    {
+        return id;
+    }
+
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public String getDescription() {
+    public String getDescription()
+    {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(String description)
+    {
         this.description = description;
     }
 
@@ -62,7 +68,28 @@ public class Product implements Serializable {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(Double price)
+    {
         this.price = price;
+    }
+
+    public List<String> getToppings()
+    {
+        return toppings;
+    }
+
+    public void setToppings(List<String> toppings)
+    {
+        this.toppings = toppings;
+    }
+
+    public List<String> getSelectedToppings()
+    {
+        return selectedToppings;
+    }
+
+    public void setSelectedToppings(List<String> selectedToppings)
+    {
+        this.selectedToppings = selectedToppings;
     }
 }

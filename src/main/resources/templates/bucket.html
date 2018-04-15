@@ -18,7 +18,7 @@
         </div>
         <div class="col-sm" th:text="${food.price} + '$'" />
         <div class="col-sm">
-            <a th:href="@{|/removeItem?code=${food.productId}|}"> Remove from bucket</a>
+            <a th:href="@{|/removeItem?code=${food.id}|}"> Remove from bucket</a>
         </div>
         <br />
         <hr />

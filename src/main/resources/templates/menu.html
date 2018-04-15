@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
-<body data-spy="scroll" data-target="#menu" data-offset="60">
+<body>
 
-<div class="container-fluid">
+<div class="container bg-secondary">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="/home">Smart Restaurant</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -29,79 +30,78 @@
             </div>
         </div>
     </nav>
-</div><!-- navbar-nav -->
-
-<div class="container-fluid bg-secondary">
-    <div class="jumbotron bg-light">
+    <div class="jumbotron bg-light" style="min-height: 100vh">
         <div class="row">
-            <div class="col-lg-2">
-                <nav class="d-none d-lg-block" id="menu">
-                    <aside style="position: fixed">
-                        <hr />
-                        <h1 class="h4">MENU</h1>
-                        <hr />
-                        <ul class="nav nav-pills flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#PIZZA">PIZZA</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#BURGER">BURGERS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#DRINKS">DRINKS</a>
-                            </li>
-                        </ul>
-                    </aside>
-                </nav>
-            </div>
-            <section class="col-lg-8 col-12">
-                <div th:each="menu : ${allMenus}">
-                    <hr th:id="${menu.name}" />
-                    <h1 class="h5" th:text="${menu.name}"></h1>
-                    <hr />
-                    <div class="col-sm-12" th:each="product : ${menu.productList}">
-                        <div class="list-group">
-                        <a th:href="@{|/addItem?code=${product.productId}|}" class="list-group-item list-group-item-action flex-column align-items-start">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1" th:text="${product.name}"></h5>
-                                <small th:text="${product.price} + '$'"></small>
-                            </div>
-                            <p class="mb-1" th:text="${product.description}"></p>
-                            <small class="text-muted">Additional Comments.</small>
-                        </a>
+            <main class="col-md-8 col-12">
+                <hr />
+                <h1 class="h4 justify-content-center">MENU</h1>
+                <hr />
+                <section id="accordion" class="col-12" th:each="menu : ${allMenus}">
+                    <div class="card">
+                        <div class="card-header" th:id="${menu.name} + 'Heading'">
+                            <h5 class="mb-0">
+                                <button class="btn btn-block btn-info" data-toggle="collapse"
+                                        th:attr="data-target='#' + ${menu.name} + 'Collapse'"
+                                        aria-expanded="true" data-th-attr="aria-controls=${menu.name}+'Collapse'">
+                                    <h1 class="h5" th:text="${menu.name}"></h1>
+                                </button>
+                            </h5>
                         </div>
                     </div>
+                    <div th:id="${menu.name} + 'Collapse'" class="collapse"
+                         data-th-attr="aria-labelledby=${menu.name}+'Heading'" data-parent="#accordion">
+                        <div class="card-body">
+                            <div th:each="product : ${menu.productList}">
+                                <div class="list-group">
+                                    <a data-toggle="modal" th:href="'#' + ${product.name} + 'Modal'"
+                                       class="list-group-item list-group-item-action flex-column align-items-start">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1" th:text="${product.name}"></h5>
+                                            <small th:text="${product.price} + '$'"></small>
+                                        </div>
+                                        <p class=" d-none d-sm-block mb-1" th:text="${product.description}"></p>
+                                        <small class="text-muted">Additional Comments.</small>
+                                    </a>
+                                </div>
+                                <div th:replace="/fragment/product-modal :: productModal(product=${product})"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section> <!-- accordion -->
+
+                <div th:replace="/fragment/cart-modal :: cartModal(bucket=${bucket}, totalItems=${totalItems})">
                 </div>
-            </section>
-            <aside class="col-lg-2">
-                <div class="d-none d-lg-block">
-                    <div> HERE </div>
-                    <div> WIL BE THE </div>
-                    <div> SHOPPING CART </div>
+
+            </main>
+            <aside class="col-md-4">
+                <div class="d-none d-md-block">
+                    <div th:replace="/fragment/cart :: cart(bucket=${bucket}, totalItems=${totalItems})">
+                    </div>
                 </div>
             </aside>
         </div>
     </div>
     <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
-        <div class="row" th:switch="${totalItems}">
-            <div class="col-12 fixed-bottom">
-            <button th:case="0" type="button" class="btn-block" disabled="true">
-                <b>PROCEED TO CHECKOUT</b>
-                <br />
-                <i><span>0 items in bucket</span></i>
-            </button>
-            <button th:case="1" type="button" class="btn-block" onclick="location.href='/bucket.html'" >
-                <b>PROCEED TO CHECKOUT</b>
-                <br />
-                <i><span>1 item in bucket</span></i>
-            </button>
-            <button th:case="*" type="button" class="btn-block" onclick="location.href='/bucket.html'" >
-                <b>PROCEED TO CHECKOUT</b>
-                <br />
-                <i><span th:text="${totalItems} + ' items in bucket'"></span></i>
-            </button>
-            </div>
+    <div class="row d-md-none d-block" th:switch="${totalItems}">
+        <div class="col-12 fixed-bottom">
+        <button th:case="0" type="button" class="btn-block btn-muted" disabled="true">
+            <img th:src="@{/img/iconic/png/cart-8x.png}" class="img-fluid" alt="Shopping Cart" />
+
+        </button>
+        <!--<button th:case="1" type="button" class="btn-block" onclick="location.href='/bucket.html'" >
+            <b>PROCEED TO CHECKOUT</b>
+            <br />
+            <i><span>1 item in bucket</span></i>
+        </button>-->
+        <button th:case="*" type="button" class="btn-block btn-success" data-toggle="modal" data-target="#bucketModal">
+            <img th:src="@{/img/iconic/png/cart-8x.png}" class="img-fluid" alt="Shopping Cart">
+                <span class="badge badge-info">
+                    <b th:text="${totalItems}"></b>
+                </span>
+            </img>
+        </button>
         </div>
+    </div>
 </div>
 <!-- <script th:src="@{/js/items_counter.js}"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

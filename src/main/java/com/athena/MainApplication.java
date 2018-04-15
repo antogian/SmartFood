@@ -16,7 +16,7 @@ public class MainApplication
         }
 
         for(Product food : foodCollectionList){
-            System.out.println(food.getName()+", "+food.getDescription()+", "+food.getPrice()+", "+food.getProductId());
+            System.out.println(food.getName()+", "+food.getDescription()+", "+food.getPrice()+", "+food.getId());
         }*/
 
         SpringApplication.run(MainApplication.class, args);
