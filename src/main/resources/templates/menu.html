@@ -36,34 +36,35 @@
                 <hr />
                 <h1 class="h4 justify-content-center">MENU</h1>
                 <hr />
-                <section id="accordion" class="col-12" th:each="menu : ${allMenus}">
-                    <div class="card">
-                        <div class="card-header" th:id="${menu.name} + 'Heading'">
-                            <h5 class="mb-0">
-                                <button class="btn btn-block btn-info" data-toggle="collapse"
-                                        th:attr="data-target='#' + ${menu.name} + 'Collapse'"
-                                        aria-expanded="true" data-th-attr="aria-controls=${menu.name}+'Collapse'">
-                                    <h1 class="h5" th:text="${menu.name}"></h1>
-                                </button>
-                            </h5>
+                <section id="accordion" class="col-12">
+                    <div th:each="menu : ${allMenus}">
+                        <div class="card">
+                            <div class="card-header" th:id="${menu.name} + 'Heading'">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-block btn-info" data-toggle="collapse" aria-expanded="true"
+                                            th:attr="aria-controls=${menu.name}+'Collapse', data-target='#' + ${menu.name} + 'Collapse'">
+                                        <h1 class="h5" th:text="${menu.name}"></h1>
+                                    </button>
+                                </h5>
+                            </div>
                         </div>
-                    </div>
-                    <div th:id="${menu.name} + 'Collapse'" class="collapse"
-                         data-th-attr="aria-labelledby=${menu.name}+'Heading'" data-parent="#accordion">
-                        <div class="card-body">
-                            <div th:each="product : ${menu.productList}">
-                                <div class="list-group">
-                                    <a data-toggle="modal" th:href="'#' + ${product.name} + 'Modal'"
-                                       class="list-group-item list-group-item-action flex-column align-items-start">
-                                        <div class="d-flex w-100 justify-content-between">
-                                            <h5 class="mb-1" th:text="${product.name}"></h5>
-                                            <small th:text="${product.price} + '$'"></small>
-                                        </div>
-                                        <p class=" d-none d-sm-block mb-1" th:text="${product.description}"></p>
-                                        <small class="text-muted">Additional Comments.</small>
-                                    </a>
+                        <div th:id="${menu.name} + 'Collapse'" class="collapse"
+                             th:attr="aria-labelledby=${menu.name}+'Heading'" data-parent="#accordion">
+                            <div class="card-body">
+                                <div th:each="product : ${menu.productList}">
+                                    <div class="list-group">
+                                        <a data-toggle="modal" th:href="'#' + ${product.name} + 'Modal'"
+                                           class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1" th:text="${product.name}"></h5>
+                                                <small th:text="${product.price} + '$'"></small>
+                                            </div>
+                                            <p class=" d-none d-sm-block mb-1" th:text="${product.description}"></p>
+                                            <small class="text-muted">Additional Comments.</small>
+                                        </a>
+                                    </div>
+                                    <div th:replace="/fragment/product-modal :: productModal(product=${product})"></div>
                                 </div>
-                                <div th:replace="/fragment/product-modal :: productModal(product=${product})"></div>
                             </div>
                         </div>
                     </div>

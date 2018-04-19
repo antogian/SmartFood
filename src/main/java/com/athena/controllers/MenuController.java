@@ -107,7 +107,8 @@ public class MenuController
     }
 
     @RequestMapping(value="/addItemToCart", method=RequestMethod.POST)
-    public String addItemToCart(@RequestParam("productID") String id, @RequestParam("checkedToppings") List<String> toppings)
+    public String addItemToCart(@RequestParam(value="productID") String id,
+                                @RequestParam(value="checkedToppings", required=false) List<String> toppings)
     {
         Product newItem = getProductById(id);
         newItem.setSelectedToppings(toppings);

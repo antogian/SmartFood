@@ -2,1365 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f462b510-8ec4-4a45-adee-1a14aa882985" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/athena/controllers/GlobalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/athena/dao/ProductDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/athena/entities/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/account-login-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/account-login-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/account-login-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/account-login-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/account-login-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/account-login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/account-logout-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/account-logout-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/account-logout-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/account-logout-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/account-logout-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/account-logout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/action-redo-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/action-redo-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/action-redo-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/action-redo-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/action-redo-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/action-redo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/action-undo-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/action-undo-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/action-undo-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/action-undo-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/action-undo-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/action-undo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-center-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-center-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-center-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-center-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-center-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-center.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-left-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-left-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-left-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-left-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-left-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-right-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-right-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-right-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-right-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-right-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/align-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/aperture-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/aperture-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/aperture-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/aperture-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/aperture-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/aperture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-bottom-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-bottom-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-bottom-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-bottom-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-bottom-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-bottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-bottom-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-bottom-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-bottom-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-bottom-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-bottom-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-bottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-left-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-left-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-left-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-left-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-left-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-right-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-right-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-right-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-right-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-right-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-top-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-top-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-top-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-top-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-top-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-circle-top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-left-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-left-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-left-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-left-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-left-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-right-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-right-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-right-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-right-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-right-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-bottom-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-bottom-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-bottom-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-bottom-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-bottom-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-bottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-left-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-left-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-left-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-left-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-left-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-right-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-right-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-right-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-right-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-right-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-top-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-top-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-top-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-top-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-top-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-thick-top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-top-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-top-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-top-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-top-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-top-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/arrow-top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/audio-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/audio-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/audio-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/audio-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/audio-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/audio-spectrum-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/audio-spectrum-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/audio-spectrum-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/audio-spectrum-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/audio-spectrum-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/audio-spectrum.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/audio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/badge-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/badge-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/badge-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/badge-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/badge-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/badge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/ban-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/ban-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/ban-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/ban-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/ban-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/ban.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bar-chart-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bar-chart-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bar-chart-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bar-chart-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bar-chart-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bar-chart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/basket-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/basket-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/basket-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/basket-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/basket-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/basket.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/battery-empty-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/battery-empty-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/battery-empty-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/battery-empty-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/battery-empty-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/battery-empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/battery-full-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/battery-full-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/battery-full-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/battery-full-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/battery-full-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/battery-full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/beaker-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/beaker-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/beaker-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/beaker-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/beaker-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/beaker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bell-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bell-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bell-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bell-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bell-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bell.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bluetooth-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bluetooth-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bluetooth-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bluetooth-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bluetooth-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bluetooth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bold-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bold-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bold-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bold-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bold-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bold.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bolt-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bolt-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bolt-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bolt-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bolt-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bolt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/book-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/book-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/book-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/book-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/book-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/book.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bookmark-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bookmark-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bookmark-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bookmark-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bookmark-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bookmark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/box-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/box-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/box-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/box-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/box-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/box.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/briefcase-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/briefcase-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/briefcase-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/briefcase-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/briefcase-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/briefcase.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/british-pound-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/british-pound-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/british-pound-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/british-pound-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/british-pound-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/british-pound.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/browser-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/browser-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/browser-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/browser-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/browser-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/browser.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/brush-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/brush-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/brush-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/brush-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/brush-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/brush.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bug-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bug-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bug-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bug-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bug-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bug.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bullhorn-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bullhorn-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bullhorn-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bullhorn-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bullhorn-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/bullhorn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/calculator-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/calculator-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/calculator-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/calculator-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/calculator-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/calculator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/calendar-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/calendar-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/calendar-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/calendar-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/calendar-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/calendar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/camera-slr-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/camera-slr-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/camera-slr-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/camera-slr-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/camera-slr-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/camera-slr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-bottom-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-bottom-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-bottom-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-bottom-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-bottom-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-bottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-left-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-left-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-left-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-left-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-left-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-right-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-right-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-right-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-right-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-right-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-top-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-top-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-top-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-top-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-top-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/caret-top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cart-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cart-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cart-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cart-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cart-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chat-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chat-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chat-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chat-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chat-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/check-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/check-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/check-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/check-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/check-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-bottom-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-bottom-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-bottom-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-bottom-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-bottom-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-bottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-left-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-left-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-left-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-left-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-left-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-right-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-right-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-right-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-right-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-right-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-top-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-top-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-top-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-top-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-top-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/chevron-top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/circle-check-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/circle-check-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/circle-check-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/circle-check-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/circle-check-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/circle-check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/circle-x-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/circle-x-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/circle-x-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/circle-x-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/circle-x-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/circle-x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/clipboard-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/clipboard-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/clipboard-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/clipboard-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/clipboard-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/clipboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/clock-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/clock-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/clock-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/clock-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/clock-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/clock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-download-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-download-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-download-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-download-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-download-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-download.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-upload-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-upload-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-upload-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-upload-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-upload-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud-upload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloudy-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloudy-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloudy-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloudy-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloudy-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cloudy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/code-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/code-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/code-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/code-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/code-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/code.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cog-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cog-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cog-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cog-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cog-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/cog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-down-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-down-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-down-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-down-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-down-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-left-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-left-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-left-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-left-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-left-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-right-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-right-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-right-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-right-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-right-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-up-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-up-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-up-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-up-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-up-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/collapse-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/command-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/command-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/command-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/command-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/command-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/command.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/comment-square-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/comment-square-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/comment-square-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/comment-square-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/comment-square-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/comment-square.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/compass-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/compass-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/compass-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/compass-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/compass-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/compass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/contrast-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/contrast-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/contrast-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/contrast-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/contrast-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/contrast.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/copywriting-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/copywriting-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/copywriting-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/copywriting-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/copywriting-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/copywriting.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/credit-card-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/credit-card-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/credit-card-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/credit-card-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/credit-card-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/credit-card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/crop-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/crop-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/crop-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/crop-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/crop-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/crop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dashboard-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dashboard-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dashboard-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dashboard-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dashboard-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dashboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/data-transfer-download-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/data-transfer-download-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/data-transfer-download-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/data-transfer-download-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/data-transfer-download-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/data-transfer-download.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/data-transfer-upload-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/data-transfer-upload-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/data-transfer-upload-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/data-transfer-upload-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/data-transfer-upload-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/data-transfer-upload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/delete-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/delete-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/delete-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/delete-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/delete-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dial-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dial-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dial-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dial-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dial-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dial.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/document-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/document-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/document-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/document-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/document-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/document.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dollar-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dollar-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dollar-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dollar-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dollar-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/dollar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-sans-left-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-sans-left-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-sans-left-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-sans-left-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-sans-left-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-sans-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-sans-right-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-sans-right-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-sans-right-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-sans-right-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-sans-right-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-sans-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-serif-left-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-serif-left-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-serif-left-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-serif-left-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-serif-left-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-serif-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-serif-right-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-serif-right-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-serif-right-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-serif-right-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-serif-right-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/double-quote-serif-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/droplet-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/droplet-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/droplet-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/droplet-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/droplet-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/droplet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eject-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eject-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eject-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eject-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eject-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eject.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/elevator-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/elevator-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/elevator-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/elevator-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/elevator-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/elevator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/ellipses-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/ellipses-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/ellipses-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/ellipses-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/ellipses-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/ellipses.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/envelope-closed-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/envelope-closed-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/envelope-closed-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/envelope-closed-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/envelope-closed-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/envelope-closed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/envelope-open-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/envelope-open-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/envelope-open-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/envelope-open-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/envelope-open-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/envelope-open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/euro-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/euro-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/euro-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/euro-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/euro-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/euro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/excerpt-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/excerpt-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/excerpt-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/excerpt-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/excerpt-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/excerpt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-down-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-down-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-down-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-down-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-down-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-left-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-left-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-left-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-left-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-left-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-right-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-right-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-right-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-right-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-right-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-up-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-up-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-up-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-up-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-up-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/expand-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/external-link-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/external-link-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/external-link-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/external-link-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/external-link-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/external-link.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eye-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eye-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eye-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eye-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eye-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eye.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eyedropper-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eyedropper-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eyedropper-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eyedropper-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eyedropper-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/eyedropper.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/file-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/file-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/file-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/file-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/file-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/file.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fire-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fire-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fire-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fire-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fire-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fire.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/flag-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/flag-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/flag-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/flag-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/flag-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/flag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/flash-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/flash-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/flash-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/flash-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/flash-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/flash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/folder-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/folder-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/folder-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/folder-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/folder-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/folder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fork-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fork-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fork-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fork-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fork-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fork.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fullscreen-enter-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fullscreen-enter-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fullscreen-enter-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fullscreen-enter-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fullscreen-enter-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fullscreen-enter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fullscreen-exit-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fullscreen-exit-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fullscreen-exit-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fullscreen-exit-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fullscreen-exit-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/fullscreen-exit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/globe-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/globe-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/globe-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/globe-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/globe-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/globe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/graph-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/graph-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/graph-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/graph-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/graph-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/graph.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-four-up-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-four-up-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-four-up-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-four-up-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-four-up-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-four-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-three-up-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-three-up-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-three-up-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-three-up-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-three-up-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-three-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-two-up-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-two-up-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-two-up-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-two-up-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-two-up-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/grid-two-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/hard-drive-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/hard-drive-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/hard-drive-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/hard-drive-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/hard-drive-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/hard-drive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/header-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/header-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/header-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/header-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/header-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/headphones-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/headphones-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/headphones-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/headphones-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/headphones-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/headphones.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/heart-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/heart-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/heart-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/heart-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/heart-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/home-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/home-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/home-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/home-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/home-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/image-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/image-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/image-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/image-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/image-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/inbox-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/inbox-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/inbox-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/inbox-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/inbox-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/inbox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/infinity-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/infinity-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/infinity-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/infinity-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/infinity-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/infinity.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/info-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/info-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/info-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/info-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/info-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/italic-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/italic-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/italic-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/italic-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/italic-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/italic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-center-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-center-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-center-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-center-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-center-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-center.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-left-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-left-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-left-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-left-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-left-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-right-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-right-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-right-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-right-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-right-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/justify-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/key-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/key-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/key-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/key-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/key-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/key.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/laptop-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/laptop-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/laptop-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/laptop-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/laptop-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/laptop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/layers-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/layers-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/layers-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/layers-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/layers-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/layers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lightbulb-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lightbulb-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lightbulb-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lightbulb-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lightbulb-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lightbulb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/link-broken-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/link-broken-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/link-broken-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/link-broken-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/link-broken-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/link-broken.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/link-intact-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/link-intact-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/link-intact-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/link-intact-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/link-intact-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/link-intact.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/list-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/list-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/list-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/list-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/list-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/list-rich-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/list-rich-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/list-rich-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/list-rich-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/list-rich-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/list-rich.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/location-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/location-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/location-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/location-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/location-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/location.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lock-locked-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lock-locked-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lock-locked-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lock-locked-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lock-locked-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lock-locked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lock-unlocked-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lock-unlocked-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lock-unlocked-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lock-unlocked-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lock-unlocked-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/lock-unlocked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-circular-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-circular-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-circular-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-circular-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-circular-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-circular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-square-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-square-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-square-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-square-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-square-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop-square.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/loop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/magnifying-glass-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/magnifying-glass-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/magnifying-glass-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/magnifying-glass-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/magnifying-glass-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/magnifying-glass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/map-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/map-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/map-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/map-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/map-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/map-marker-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/map-marker-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/map-marker-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/map-marker-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/map-marker-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/map-marker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/map.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-pause-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-pause-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-pause-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-pause-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-pause-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-pause.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-play-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-play-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-play-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-play-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-play-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-record-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-record-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-record-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-record-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-record-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-record.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-skip-backward-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-skip-backward-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-skip-backward-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-skip-backward-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-skip-backward-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-skip-backward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-skip-forward-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-skip-forward-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-skip-forward-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-skip-forward-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-skip-forward-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-skip-forward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-step-backward-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-step-backward-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-step-backward-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-step-backward-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-step-backward-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-step-backward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-step-forward-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-step-forward-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-step-forward-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-step-forward-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-step-forward-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-step-forward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-stop-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-stop-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-stop-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-stop-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-stop-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/media-stop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/medical-cross-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/medical-cross-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/medical-cross-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/medical-cross-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/medical-cross-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/medical-cross.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/menu-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/menu-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/menu-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/menu-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/menu-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/microphone-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/microphone-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/microphone-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/microphone-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/microphone-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/microphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/minus-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/minus-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/minus-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/minus-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/minus-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/minus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/monitor-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/monitor-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/monitor-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/monitor-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/monitor-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/monitor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/moon-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/moon-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/moon-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/moon-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/moon-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/moon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/move-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/move-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/move-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/move-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/move-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/move.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/musical-note-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/musical-note-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/musical-note-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/musical-note-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/musical-note-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/musical-note.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/paperclip-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/paperclip-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/paperclip-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/paperclip-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/paperclip-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/paperclip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pencil-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pencil-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pencil-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pencil-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pencil-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pencil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/people-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/people-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/people-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/people-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/people-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/people.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/person-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/person-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/person-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/person-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/person-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/person.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/phone-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/phone-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/phone-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/phone-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/phone-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/phone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pie-chart-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pie-chart-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pie-chart-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pie-chart-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pie-chart-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pie-chart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pin-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pin-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pin-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pin-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pin-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/play-circle-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/play-circle-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/play-circle-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/play-circle-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/play-circle-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/play-circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/plus-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/plus-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/plus-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/plus-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/plus-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/power-standby-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/power-standby-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/power-standby-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/power-standby-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/power-standby-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/power-standby.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/print-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/print-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/print-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/print-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/print-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/print.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/project-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/project-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/project-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/project-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/project-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/project.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pulse-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pulse-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pulse-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pulse-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pulse-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/pulse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/puzzle-piece-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/puzzle-piece-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/puzzle-piece-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/puzzle-piece-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/puzzle-piece-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/puzzle-piece.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/question-mark-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/question-mark-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/question-mark-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/question-mark-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/question-mark-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/question-mark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rain-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rain-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rain-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rain-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rain-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rain.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/random-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/random-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/random-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/random-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/random-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/random.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/reload-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/reload-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/reload-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/reload-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/reload-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/reload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-both-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-both-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-both-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-both-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-both-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-both.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-height-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-height-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-height-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-height-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-height-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-height.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-width-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-width-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-width-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-width-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-width-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/resize-width.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rss-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rss-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rss-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rss-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rss-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rss-alt-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rss-alt-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rss-alt-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rss-alt-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rss-alt-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rss-alt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/rss.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/script-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/script-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/script-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/script-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/script-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/script.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/share-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/share-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/share-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/share-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/share-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/share-boxed-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/share-boxed-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/share-boxed-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/share-boxed-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/share-boxed-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/share-boxed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/share.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/shield-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/shield-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/shield-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/shield-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/shield-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/shield.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/signal-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/signal-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/signal-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/signal-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/signal-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/signal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/signpost-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/signpost-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/signpost-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/signpost-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/signpost-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/signpost.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sort-ascending-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sort-ascending-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sort-ascending-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sort-ascending-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sort-ascending-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sort-ascending.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sort-descending-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sort-descending-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sort-descending-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sort-descending-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sort-descending-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sort-descending.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/spreadsheet-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/spreadsheet-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/spreadsheet-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/spreadsheet-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/spreadsheet-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/spreadsheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/star-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/star-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/star-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/star-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/star-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sun-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sun-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sun-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sun-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sun-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/sun.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tablet-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tablet-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tablet-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tablet-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tablet-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tablet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tag-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tag-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tag-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tag-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tag-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tags-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tags-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tags-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tags-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tags-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/tags.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/target-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/target-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/target-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/target-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/target-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/target.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/task-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/task-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/task-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/task-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/task-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/task.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/terminal-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/terminal-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/terminal-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/terminal-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/terminal-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/terminal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/text-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/text-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/text-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/text-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/text-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/text.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/thumb-down-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/thumb-down-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/thumb-down-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/thumb-down-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/thumb-down-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/thumb-down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/thumb-up-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/thumb-up-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/thumb-up-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/thumb-up-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/thumb-up-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/thumb-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/timer-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/timer-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/timer-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/timer-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/timer-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/timer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/transfer-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/transfer-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/transfer-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/transfer-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/transfer-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/transfer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/trash-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/trash-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/trash-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/trash-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/trash-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/trash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/underline-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/underline-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/underline-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/underline-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/underline-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/underline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-bottom-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-bottom-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-bottom-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-bottom-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-bottom-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-bottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-center-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-center-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-center-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-center-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-center-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-center.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-top-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-top-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-top-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-top-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-top-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/vertical-align-top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/video-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/video-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/video-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/video-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/video-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/video.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-high-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-high-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-high-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-high-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-high-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-high.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-low-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-low-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-low-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-low-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-low-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-low.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-off-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-off-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-off-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-off-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-off-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/volume-off.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/warning-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/warning-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/warning-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/warning-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/warning-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/warning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/wifi-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/wifi-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/wifi-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/wifi-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/wifi-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/wifi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/wrench-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/wrench-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/wrench-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/wrench-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/wrench-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/wrench.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/x-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/x-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/x-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/x-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/x-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/yen-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/yen-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/yen-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/yen-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/yen-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/yen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/zoom-in-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/zoom-in-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/zoom-in-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/zoom-in-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/zoom-in-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/zoom-in.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/zoom-out-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/zoom-out-3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/zoom-out-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/zoom-out-6x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/zoom-out-8x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconic/png/zoom-out.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/cart-modal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/product-modal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_9_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_0_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_layout_dialect_1_4_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_0_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_27.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_29.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_27.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_29.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_27.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_29.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_27.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_2_4_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_6_Final.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_10_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_10_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_10_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_10_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_1_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_1_5_10_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring4_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_10_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_10_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_14_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_14_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_14_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_14_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_14_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_14_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_2_1_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring4_2_1_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_0_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/athena/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/athena/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartFood.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SmartFood.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/athena/controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/athena/controllers/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/athena/dao/MenuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/athena/dao/MenuDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/athena/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/athena/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/bucket.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/bucket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1378,62 +74,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="menu.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="menu.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10">
-              <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+            <state relative-caret-position="1092">
+              <caret line="70" column="45" lean-forward="true" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
               <folding>
+                <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product-modal.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragment/product-modal.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-              <folding>
-                <element signature="e#1187#1194#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cart-modal.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragment/cart-modal.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cart.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragment/cart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bucket.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/bucket.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="57" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="57" />
+            <state relative-caret-position="840">
+              <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -1441,7 +100,7 @@
       <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/entities/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="315">
               <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1459,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/entities/Menu.java">
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+            <state relative-caret-position="168">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -1471,8 +130,44 @@
       <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/controllers/MenuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+            <state relative-caret-position="420">
+              <caret line="118" selection-start-line="118" selection-end-line="118" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragment/cart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="693">
+              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product-modal.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragment/product-modal.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/entities/Menu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BucketController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/controllers/BucketController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -1529,13 +224,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/modal.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/athena/dao/MenuDAO.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/athena/entities/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/athena/controllers/MenuController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/cart.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/cartModal.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/product-modal.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/productModal.html" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/fragment/cart.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/athena/controllers/MenuController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/menu.html" />
       </list>
     </option>
@@ -1564,7 +260,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -1649,10 +344,35 @@
               <item name="athena" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SmartFood" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartFood" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartFood" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartFood" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartFood" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartFood" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="fragment" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1850,7 +570,12 @@
       <workItem from="1523707493302" duration="3160000" />
       <workItem from="1523714267389" duration="3460000" />
       <workItem from="1523754139191" duration="598000" />
-      <workItem from="1523806986844" duration="917000" />
+      <workItem from="1523806986844" duration="1424000" />
+      <workItem from="1523894661620" duration="2882000" />
+      <workItem from="1523969244209" duration="3096000" />
+      <workItem from="1524061722321" duration="1857000" />
+      <workItem from="1524084644246" duration="1187000" />
+      <workItem from="1524176458092" duration="810000" />
     </task>
     <task id="LOCAL-00001" summary="Commit test">
       <created>1519304891677</created>
@@ -1887,17 +612,25 @@
       <option name="project" value="LOCAL" />
       <updated>1521763801153</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added modals &amp; layout fixes">
+      <created>1523807985289</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1523807985290</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297705000" />
+    <option name="totallyTimeSpent" value="308044000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.3765625" side_tool="true" weight="0.2858661" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.37760416" side_tool="true" weight="0.3134963" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
@@ -1914,13 +647,12 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6234375" visible="true" weight="0.3134963" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6223958" visible="true" weight="0.3134963" />
       <window_info anchor="bottom" id="Spring" order="12" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21510416" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21510416" />
       <window_info anchor="right" id="Bean Validation" order="10" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48958334" weight="0.32943678" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1928,6 +660,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48958334" weight="0.32943678" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3296875" />
     </layout>
   </component>
@@ -1944,7 +677,8 @@
     <MESSAGE value="Added service layer" />
     <MESSAGE value="Added navigation bar" />
     <MESSAGE value="Added layout improvements &amp; more dynamic data feed" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Added modals &amp; layout fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added modals &amp; layout fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1952,6 +686,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/controllers/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="903">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/controllers/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -2130,21 +871,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/controllers/BucketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/controllers/ExperimentsController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -2181,13 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/MainApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -2202,30 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/controllers/MenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragment/product-modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-          <folding>
-            <element signature="e#1187#1194#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragment/cart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/bucket.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -2233,40 +929,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/productModal.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragment/cart-modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
+        <state relative-caret-position="1071">
           <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
-          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/entities/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="315">
           <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/entities/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/controllers/BucketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -2277,10 +974,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/entities/Menu.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragment/product-modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        <state relative-caret-position="714">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragment/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/athena/controllers/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="70" column="45" lean-forward="true" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+          <folding>
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
