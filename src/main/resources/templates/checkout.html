@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MENU</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initialscale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css"/>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Smart Restaurant</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/menu">Order Online
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Container -->
+    <div class="container">
+        <div class="py-5 text-center">
+            <h2>Finalize Order</h2>
+            <p class="lead">You need to fill your information in order to place your order.</p>
+        </div>
+        <hr />
+
+        <div class="row">
+            <form class="col-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div>
+                            <h5>Order Type</h5>
+                            <hr />
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="takeawayRadio" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="takeawayRadio"> TakeAway </label>
+                        </div>
+                        <br />
+                        <div class="custom-control custom-radio">
+                            <div class="mb-2">
+                                <input type="radio" id="deliveryRadio" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="deliveryRadio"> Delivery </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <h5>Payment Method</h5>
+                            <hr />
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio1">
+                                Cash<p><i>Pay the traditional way</i></p>
+                            </label>
+                        </div>
+                        <br />
+                        <div class="custom-control custom-radio">
+                            <div class="mb-3">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">
+                                    <img th:src="@{/img/mcvs_acc_opt_hrz_105_1x.png}"
+                                         class="img-fluid" alt="CreditCards" />
+                                </label>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="custom-control custom-radio">
+                            <div class="mb-3">
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">
+                                    <img th:src="@{https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png}"
+                                         class="img-fluid" alt="PayPal logo" />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    <h5>Delivery Information</h5>
+                    <hr />
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationDefault01">First name</label>
+                                <input type="text" class="form-control" id="validationDefault01" placeholder="First name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationDefault02">Last name</label>
+                                <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-10 mb-3">
+                                <div class="form-group">
+                                    <label for="inputAddress">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                </div>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <div class="form-group">
+                                    <label for="inputFloor">Floor</label>
+                                    <input type="number" class="form-control" id="inputFloor" placeholder="Floor" min="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 mb-3">
+                                <div class="form-group">
+                                    <label for="inputTelephone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="inputTelephone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 mb-3">
+                                <div class="form-group">
+                                    <label for="inputComments">Additional Comments</label>
+                                    <textarea class="form-control" id="inputComments" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="col-md-4">
+                        <div th:replace="/fragment/cart-final :: cartFinal(bucket=${bucket})">
+                        </div>
+                    </div>-->
+                </div>
+            </form>
+            </div>
+    </div>
+    <footer class="py-5 mt-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; AthenaPOS 2018</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+</html>

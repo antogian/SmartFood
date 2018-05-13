@@ -4,106 +4,123 @@
     <title>MENU</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/css/accordion.css}" type="text/css" />
 </head>
 <body>
 
-<div class="container bg-secondary">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="/home">Smart Restaurant</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link" href="/home">Home</a>
-                <a class="nav-item nav-link active" href="/menu">Order Online<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link disabled">About</a>
-            </div>
-        </div>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <div class="nav-item text-white">Delivery Active Hours: 12:00 - 00:00</div>
+<div class="container-fluid">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">Smart Restaurant</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/menu">Order Online
+                        <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-    <div class="jumbotron bg-light" style="min-height: 100vh">
-        <div class="row">
-            <main class="col-md-8 col-12">
-                <hr />
-                <h1 class="h4 justify-content-center">MENU</h1>
-                <hr />
-                <section id="accordion" class="col-12">
-                    <div th:each="menu : ${allMenus}">
-                        <div class="card">
-                            <div class="card-header" th:id="${menu.name} + 'Heading'">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-block btn-info" data-toggle="collapse" aria-expanded="true"
-                                            th:attr="aria-controls=${menu.name}+'Collapse', data-target='#' + ${menu.name} + 'Collapse'">
-                                        <h1 class="h5" th:text="${menu.name}"></h1>
-                                    </button>
-                                </h5>
-                            </div>
+</div>
+
+<!-- Page Content -->
+<div class="container">
+    <hr>
+    <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-12 col-md">
+
+            <!-- Title -->
+            <h1 class="mt-4 display-4 text-center">Soul Kitchen</h1>
+
+            <hr>
+            <!-- Preview Image -->
+            <img class="img-fluid rounded" src="http://placehold.it/1200x300" alt="logo">
+
+            <hr>
+
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-8 col-12">
+            <div th:replace="/fragment/accordion :: menu(allMenus=${allMenus})"></div>
+        </div>
+        <!-- Sidebar Widgets Column -->
+        <div class="col-lg-4 col-12 order-md-2 mb-4">
+            <div class="d-sm-block d-none">
+                <div th:switch="${totalItems}">
+                    <!-- Side Widget -->
+                    <div th:case="0">
+                        <div th:replace="/fragment/cart-empty :: cart(bucket=${bucket})">
                         </div>
-                        <div th:id="${menu.name} + 'Collapse'" class="collapse"
-                             th:attr="aria-labelledby=${menu.name}+'Heading'" data-parent="#accordion">
-                            <div class="card-body">
-                                <div th:each="product : ${menu.productList}">
-                                    <div class="list-group">
-                                        <a data-toggle="modal" th:href="'#' + ${product.name} + 'Modal'"
-                                           class="list-group-item list-group-item-action flex-column align-items-start">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1" th:text="${product.name}"></h5>
-                                                <small th:text="${product.price} + '$'"></small>
-                                            </div>
-                                            <p class=" d-none d-sm-block mb-1" th:text="${product.description}"></p>
-                                            <small class="text-muted">Additional Comments.</small>
-                                        </a>
+                    </div>
+                    <div th:case="*">
+                        <div th:replace="/fragment/cart :: cart(bucket=${bucket})">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-sm-none d-block">
+                <hr>
+                <div class="card">
+                    <!--<h5 class="card-header text-center">Your Cart</h5> -->
+                    <h5 class="mb-0">
+                        <button class="card-header text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            <b>Your Cart</b>
+                        </button>
+                    </h5>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card-body">
+                            <div th:switch="${totalItems}">
+                                <!-- Side Widget -->
+                                <div th:case="0">
+                                    <div th:replace="/fragment/cart-mobile-empty :: cart-mobile-empty(bucket=${bucket})">
                                     </div>
-                                    <div th:replace="/fragment/product-modal :: productModal(product=${product})"></div>
+                                </div>
+                                <div th:case="*">
+                                    <div th:replace="/fragment/cart-mobile :: cart-mobile(bucket=${bucket})">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section> <!-- accordion -->
-
-                <div th:replace="/fragment/cart-modal :: cartModal(bucket=${bucket}, totalItems=${totalItems})">
                 </div>
-
-            </main>
-            <aside class="col-md-4">
-                <div class="d-none d-md-block">
-                    <div th:replace="/fragment/cart :: cart(bucket=${bucket}, totalItems=${totalItems})">
-                    </div>
-                </div>
-            </aside>
+            </div>
         </div>
-    </div>
-    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
-    <div class="row d-md-none d-block" th:switch="${totalItems}">
-        <div class="col-12 fixed-bottom">
-        <button th:case="0" type="button" class="btn-block btn-muted" disabled="true">
-            <img th:src="@{/img/iconic/png/cart-8x.png}" class="img-fluid" alt="Shopping Cart" />
 
-        </button>
-        <!--<button th:case="1" type="button" class="btn-block" onclick="location.href='/bucket.html'" >
-            <b>PROCEED TO CHECKOUT</b>
-            <br />
-            <i><span>1 item in bucket</span></i>
-        </button>-->
-        <button th:case="*" type="button" class="btn-block btn-success" data-toggle="modal" data-target="#bucketModal">
-            <img th:src="@{/img/iconic/png/cart-8x.png}" class="img-fluid" alt="Shopping Cart">
-                <span class="badge badge-info">
-                    <b th:text="${totalItems}"></b>
-                </span>
-            </img>
-        </button>
-        </div>
     </div>
+    <!-- /.row -->
+    <hr>
+
 </div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="footer py-5 mt-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; AthenaPOS 2018</p>
+    </div>
+    <!-- /.container -->
+</footer>
 <!-- <script th:src="@{/js/items_counter.js}"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

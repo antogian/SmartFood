@@ -147,4 +147,20 @@ public class MenuController
         return "experiments";
     }
 
+    @RequestMapping(value="/checkout")
+    public String checkout(Model model)
+    {
+        model.addAttribute("bucket", bucket);
+
+        return "checkout";
+    }
+
+    @RequestMapping(value="/checkout-bootstrap")
+    public String checkoutBootstrap(Model model)
+    {
+        model.addAttribute("bucket", bucket);
+
+        return "checkout-bootstrap";
+    }
+
 }
