@@ -15,7 +15,7 @@ a:hover,a:focus{
 #accordion .menu-title a{
     display: block;
     padding: 12px 20px 12px 50px;
-    background: #ebb710;
+    background: #137a91;
     font-size: 18px;
     font-weight: 600;
     color: #fff;
@@ -37,7 +37,7 @@ a:hover,a:focus{
     height: 55px;
     line-height: 55px;
     border-radius: 50%;
-    background: #ebb710;
+    background: #137a91;
     font-size: 25px;
     color: #fff;
     text-align: center;

@@ -1,5 +1,7 @@
 package com.athena.entities;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +15,7 @@ public class Product
     private List<String> toppings;
 
     private List<String> selectedToppings;
+    private int quantity;
 
     public Product()
     {
@@ -21,7 +24,9 @@ public class Product
         this.description = "";
         this.price = 0.0;
         this.toppings = new ArrayList<String>();
+
         this.selectedToppings = new ArrayList<String>();
+        this.quantity = 1;
     }
 
     public Product(String id, String name, String description, Double price, List<String> toppings)
@@ -32,6 +37,7 @@ public class Product
         this.price = price;
         this.toppings = toppings;
         this.selectedToppings = new ArrayList<String>();
+        this.quantity = 1;
     }
 
     public void setId(String id)
@@ -64,8 +70,12 @@ public class Product
         this.description = description;
     }
 
-    public Double getPrice() {
-        return price;
+    public Double getPrice()
+    {
+        BigDecimal bd = new BigDecimal(Double.toString(price*quantity));
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+
+        return bd.doubleValue();
     }
 
     public void setPrice(Double price)
@@ -91,5 +101,15 @@ public class Product
     public void setSelectedToppings(List<String> selectedToppings)
     {
         this.selectedToppings = selectedToppings;
+    }
+
+    public int getQuantity()
+    {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity)
+    {
+        this.quantity = quantity;
     }
 }

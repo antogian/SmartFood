@@ -27,7 +27,7 @@
                 <div class="card-body">
                     <div th:each="product : ${menu.productList}">
                         <div class="list-group">
-                            <a data-toggle="modal" th:href="'#' + ${product.name} + 'Modal'"
+                            <a data-toggle="modal" th:href="'#' + ${product.name} + 'MenuModal'"
                                class="list-group-item list-group-item-action flex-column align-items-start">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1" th:text="${product.name}"></h5>
@@ -37,7 +37,7 @@
                                 <small class="text-muted">Click to Order</small>
                             </a>
                         </div>
-                        <div th:replace="/fragment/product-modal :: productModal(product=${product})"></div>
+                        <div th:replace="/fragment/menu-product-modal :: productModal(product=${product})"></div>
                     </div>
                 </div>
             </div>

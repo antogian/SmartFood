@@ -10,7 +10,7 @@
     <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css"/>
     <link rel="stylesheet" th:href="@{/css/accordion.css}" type="text/css" />
 </head>
-<body>
+<body class="bg-light">
 
 <div class="container-fluid">
     <!-- Navigation -->
@@ -61,50 +61,49 @@
     </div>
     <hr>
     <div class="row">
-        <div class="col-lg-8 col-12">
+        <div class="col-md-8 col-12">
             <div th:replace="/fragment/accordion :: menu(allMenus=${allMenus})"></div>
         </div>
         <!-- Sidebar Widgets Column -->
-        <div class="col-lg-4 col-12 order-md-2 mb-4">
-            <div class="d-sm-block d-none">
-                <div th:switch="${totalItems}">
-                    <!-- Side Widget -->
-                    <div th:case="0">
-                        <div th:replace="/fragment/cart-empty :: cart(bucket=${bucket})">
-                        </div>
+        <div class="col-md-4 col-12 order-2 mb-4">
+            <!-- <div class="d-sm-block d-none"> -->
+            <div class="d-md-none d-block">
+                <hr>
+            </div>
+            <div th:switch="${totalItems}">
+                <div th:case="0">
+                    <div th:replace="/fragment/cart-empty :: cart(shoppingCart=${shoppingCart})">
                     </div>
-                    <div th:case="*">
-                        <div th:replace="/fragment/cart :: cart(bucket=${bucket})">
-                        </div>
+                </div>
+                <div th:case="*">
+                    <div th:replace="/fragment/cart :: cart(shoppingCart=${shoppingCart})">
                     </div>
                 </div>
             </div>
-            <div class="d-sm-none d-block">
+            <!--<div class="d-sm-none d-block">
                 <hr>
                 <div class="card">
-                    <!--<h5 class="card-header text-center">Your Cart</h5> -->
                     <h5 class="mb-0">
                         <button class="card-header text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                            <b>Your Cart</b>
+                            <img th:src="@{/img/iconic/png/cart-6x.png}" class="img-fluid" alt="Shopping Cart" />
                         </button>
                     </h5>
                     <div class="collapse" id="collapseExample">
                         <div class="card-body">
                             <div th:switch="${totalItems}">
-                                <!-- Side Widget -->
                                 <div th:case="0">
-                                    <div th:replace="/fragment/cart-mobile-empty :: cart-mobile-empty(bucket=${bucket})">
+                                    <div th:replace="/fragment/cart-mobile-empty :: cart-mobile-empty(shoppingCart=${shoppingCart})">
                                     </div>
                                 </div>
                                 <div th:case="*">
-                                    <div th:replace="/fragment/cart-mobile :: cart-mobile(bucket=${bucket})">
+                                    <div th:replace="/fragment/cart-mobile :: cart-mobile(shoppingCart=${shoppingCart})">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
 
     </div>
