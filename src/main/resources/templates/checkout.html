@@ -42,110 +42,150 @@
             <h2>Finalize Order</h2>
             <p class="lead">You need to fill your information in order to place your order.</p>
         </div>
-        <hr />
 
         <div class="row">
-            <form class="col-12">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div>
-                            <h5>Order Type</h5>
-                            <hr />
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="takeawayRadio" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="takeawayRadio"> TakeAway </label>
-                        </div>
-                        <br />
-                        <div class="custom-control custom-radio">
-                            <div class="mb-2">
-                                <input type="radio" id="deliveryRadio" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="deliveryRadio"> Delivery </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div>
-                            <h5>Payment Method</h5>
-                            <hr />
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio1">
-                                Cash<p><i>Pay the traditional way</i></p>
-                            </label>
-                        </div>
-                        <br />
-                        <div class="custom-control custom-radio">
-                            <div class="mb-3">
-                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio2">
-                                    <img th:src="@{/img/mcvs_acc_opt_hrz_105_1x.png}"
-                                         class="img-fluid" alt="CreditCards" />
-                                </label>
-                            </div>
-                        </div>
-                        <br />
-                        <div class="custom-control custom-radio">
-                            <div class="mb-3">
-                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio3">
-                                    <img th:src="@{https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png}"
-                                         class="img-fluid" alt="PayPal logo" />
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                    <h5>Delivery Information</h5>
-                    <hr />
-                        <div class="form-row">
-                            <div class="col-md-6 mb-3">
-                                <label for="validationDefault01">First name</label>
-                                <input type="text" class="form-control" id="validationDefault01" placeholder="First name" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="validationDefault02">Last name</label>
-                                <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md-10 mb-3">
-                                <div class="form-group">
-                                    <label for="inputAddress">Address</label>
-                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                </div>
-                            </div>
-                            <div class="col-md-2 mb-3">
-                                <div class="form-group">
-                                    <label for="inputFloor">Floor</label>
-                                    <input type="number" class="form-control" id="inputFloor" placeholder="Floor" min="0">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 mb-3">
-                                <div class="form-group">
-                                    <label for="inputTelephone">Phone Number</label>
-                                    <input type="tel" class="form-control" id="inputTelephone">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 mb-3">
-                                <div class="form-group">
-                                    <label for="inputComments">Additional Comments</label>
-                                    <textarea class="form-control" id="inputComments" rows="3"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--<div class="col-md-4">
-                        <div th:replace="/fragment/cart-checkout :: cart-checkout(shoppingCart=${shoppingCart})"></div>
-                    </div>-->
+            <div class="col-md-4 order-md-2 mb-4">
+                <div th:replace="/fragment/cart-empty :: cart(shoppingCart=${shoppingCart})">
                 </div>
-            </form>
             </div>
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Contact Info</h4>
+                <hr>
+                <form class="needs-validation" action="/processOrder" th:action="@{/processOrder}" method="post" novalidate>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">First name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="" name="firstName" required>
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName">Last name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="" value="" name="lastName" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="you@email.com" name="email">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="telephone" name="phone">
+                            <div class="invalid-feedback">
+                                Please enter a valid phone number for shipping updates.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity" name="city">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">State</label>
+                            <input type="text" class="form-control" id="inputState" name="state">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" class="form-control" id="inputZip" name="zip">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-10">
+                            <div class="form-group">
+                                <label for="inputAddress1">Address</label>
+                                <input type="text" class="form-control" id="inputAddress1"
+                                       placeholder="1234 Main St" name="address">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="inputFloor1">Floor</label>
+                                <input type="number" class="form-control" id="inputFloor1" value="0" min="0"
+                                       placeholder="Floor" name="floor">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="mb-4">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="save-info">
+                        <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                    </div>
+                    <hr class="mb-4">
+
+                    <h4 class="mb-3">Payment</h4>
+                    <hr class="mb-4">
+
+                    <!--
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                            <label class="custom-control-label" for="credit">Credit card</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                            <label class="custom-control-label" for="debit">Debit card</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                            <label class="custom-control-label" for="paypal">Paypal</label>
+                        </div>
+                    </div>
+                    -->
+
+                    <!--
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-name">Name on card</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                            <small class="text-muted">Full name as displayed on card</small>
+                            <div class="invalid-feedback">
+                                Name on card is required
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-number">Credit card number</label>
+                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Credit card number is required
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-expiration">Expiration</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Expiration date required
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-expiration">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Security code required
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                    <hr class="mb-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Place Order</button>
+                </form>
+            </div>
+        </div>
+        <hr>
     </div>
     <footer class="py-5 mt-5 bg-dark">
         <div class="container">

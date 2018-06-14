@@ -26,12 +26,17 @@
                         <div class="card-body">
                             <div th:each="topping : ${product.toppings}">
                                 <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                                    <!--<input type="checkbox" class="custom-control-input" th:field="*{selectedToppings}" />
-                                    <label class="custom-control-label" th:for="${#ids.prev('selectedToppings')}" th:text="${topping}"></label>-->
-                                    <input type="checkbox" class="custom-control-input" th:id="${topping} + ${product.id}"
-                                           th:checked="${#lists.contains(product.selectedToppings, topping)}"
-                                           name="checkedToppings" th:value="${topping}" />
-                                    <label class="custom-control-label" th:for="${topping} + ${product.id}" th:text="${topping}"></label>
+                                    <div th:if="${not #lists.isEmpty(product.selectedToppings)}">
+                                        <input type="checkbox" class="custom-control-input" th:id="${topping} + ${product.id}"
+                                               th:checked="${#lists.contains(product.selectedToppings, topping)}"
+                                               name="checkedToppings" th:value="${topping}" />
+                                        <label class="custom-control-label" th:for="${topping} + ${product.id}" th:text="${topping}"></label>
+                                    </div>
+                                    <div th:if="${#lists.isEmpty(product.selectedToppings)}">
+                                        <input type="checkbox" class="custom-control-input" th:id="${topping} + ${product.id}"
+                                               name="checkedToppings" th:value="${topping}" />
+                                        <label class="custom-control-label" th:for="${topping} + ${product.id}" th:text="${topping}"></label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">

@@ -2,8 +2,10 @@ package com.athena.controllers;
 
 import com.athena.entities.Menu;
 import com.athena.entities.Product;
+import com.athena.entities.User;
 import com.athena.model.ShoppingCart;
 import com.athena.services.MenuService;
+import com.athena.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -20,15 +23,19 @@ public class MenuController
 {
     private List<Menu> allMenus;
     private ShoppingCart cart;
+    private User currentUser;
 
     @Autowired
     MenuService menuService;
+    @Autowired
+    UserService userService;
 
-    private void initializeFeed()
+    private void initialize()
     {
         allMenus = new ArrayList<Menu>();
         allMenus = menuService.getAllMenus();
         cart = new ShoppingCart();
+        currentUser = userService.getCurrentUser();
     }
 
     private Product getProductById(String id)
@@ -46,26 +53,6 @@ public class MenuController
         return new Product();
     }
 
-    private void addItemToBucket(String id)
-    {
-        for(int i = 0; i<allMenus.size(); i++)
-        {
-            for(int j=0; j<allMenus.get(i).getProductList().size(); j++)
-            {
-                if (allMenus.get(i).getProductList().get(j).getId().equals(id))
-                {
-                    cart.addProduct(allMenus.get(i).getProductList().get(j));
-                    return;
-                }
-            }
-        }
-    }
-
-    private void addItemToBucket(Product item)
-    {
-        cart.addProduct(item);
-    }
-
     private void removeItemFromBucket(String id)
     {
         cart.removeProduct(id);
@@ -76,7 +63,7 @@ public class MenuController
     {
         if(allMenus == null && cart == null)
         {
-            initializeFeed();
+            initialize();
             //populateFeed();
         }
         model.addAttribute("allMenus", allMenus);
@@ -90,7 +77,7 @@ public class MenuController
     @RequestMapping(value="/addItem", method=RequestMethod.POST)
     public String addItemToCart(@RequestParam(value="productID") String id,
                                 @RequestParam(value="checkedToppings", required=false) List<String> toppings,
-                                @RequestParam(value="productQuantity") String quantity)
+                                @RequestParam(value="productQuantity") int quantity)
     {
         Product newItem = new Product();
         Product menuItem = getProductById(id);
@@ -101,7 +88,7 @@ public class MenuController
         newItem.setPrice(menuItem.getPrice());
         newItem.setToppings(menuItem.getToppings());
         newItem.setSelectedToppings(toppings);
-        newItem.setQuantity(Integer.parseInt(quantity));
+        newItem.setQuantity(quantity);
 
         cart.addProduct(newItem);
 
@@ -111,12 +98,12 @@ public class MenuController
     @RequestMapping(value="/editItem", method=RequestMethod.POST)
     public String editItem(@RequestParam(value="productID") String id,
                                 @RequestParam(value="checkedToppings", required=false) List<String> toppings,
-                                @RequestParam(value="productQuantity") String quantity)
+                                @RequestParam(value="productQuantity") int quantity)
     {
         Product currentItem = cart.getProductById(id);
 
         currentItem.setSelectedToppings(toppings);
-        currentItem.setQuantity(Integer.parseInt(quantity));
+        currentItem.setQuantity(quantity);
 
         return "redirect:/menu";
     }
@@ -134,7 +121,7 @@ public class MenuController
     {
         if(allMenus == null && cart == null)
         {
-            initializeFeed();
+            initialize();
             //populateFeed();
         }
         model.addAttribute("allMenus", allMenus);
@@ -144,9 +131,10 @@ public class MenuController
     }
 
     @RequestMapping(value="/checkout")
-    public String checkout(Model model)
+    public String checkout(Model model, HttpServletRequest request)
     {
         model.addAttribute("shoppingCart", cart);
+        model.addAttribute("user", new User());
 
         return "checkout";
     }
@@ -159,4 +147,23 @@ public class MenuController
         return "checkout-bootstrap";
     }
 
+    @RequestMapping(value="/processOrder", method=RequestMethod.POST)
+    public String processOrder(@RequestParam(value="firstName") String firstName,
+                               @RequestParam(value="lastName") String lastName, @RequestParam(value="email") String email,
+                               @RequestParam(value="phone") String phoneNumber, @RequestParam(value="city") String city,
+                               @RequestParam(value="state") String state, @RequestParam(value="zip") String zip,
+                               @RequestParam(value="address") String address, @RequestParam(value="floor") int floor)
+    {
+        currentUser.setFirstName(firstName);
+        currentUser.setLastName(lastName);
+        currentUser.setEmail(email);
+        currentUser.setPhoneNumber(phoneNumber);
+        currentUser.setCity(city);
+        currentUser.setState(state);
+        currentUser.setZip(zip);
+        currentUser.setAddress(address);
+        currentUser.setFloor(floor);
+
+        return "redirect:/checkout";
+    }
 }
