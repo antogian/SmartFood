@@ -62,7 +62,7 @@
     <hr>
     <div class="row">
         <div class="col-md-8 col-12">
-            <div th:replace="/fragment/accordion :: menu(allMenus=${allMenus})"></div>
+            <div th:replace="fragment/accordion :: menu(allMenus=${allMenus})"></div>
         </div>
         <!-- Sidebar Widgets Column -->
         <div class="col-md-4 col-12 order-2 mb-4">
@@ -72,11 +72,11 @@
             </div>
             <div th:switch="${totalItems}">
                 <div th:case="0">
-                    <div th:replace="/fragment/cart-empty :: cart(shoppingCart=${shoppingCart})">
+                    <div th:replace="fragment/cart-empty :: cart(shoppingCart=${shoppingCart})">
                     </div>
                 </div>
                 <div th:case="*">
-                    <div th:replace="/fragment/cart :: cart(shoppingCart=${shoppingCart})">
+                    <div th:replace="fragment/cart :: cart(shoppingCart=${shoppingCart})">
                     </div>
                 </div>
             </div>
@@ -92,11 +92,11 @@
                         <div class="card-body">
                             <div th:switch="${totalItems}">
                                 <div th:case="0">
-                                    <div th:replace="/fragment/cart-mobile-empty :: cart-mobile-empty(shoppingCart=${shoppingCart})">
+                                    <div th:replace="fragment/cart-mobile-empty :: cart-mobile-empty(shoppingCart=${shoppingCart})">
                                     </div>
                                 </div>
                                 <div th:case="*">
-                                    <div th:replace="/fragment/cart-mobile :: cart-mobile(shoppingCart=${shoppingCart})">
+                                    <div th:replace="fragment/cart-mobile :: cart-mobile(shoppingCart=${shoppingCart})">
                                     </div>
                                 </div>
                             </div>
