@@ -21,16 +21,23 @@
                         <th class="text-mute">Qty</th>
                         <th class="text-mute">Item</th>
                         <th class="text-center">Price</th>
+                        <th> </th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr th:each="product : ${shoppingCart.selectedProducts}">
                         <td>
-                            <span class="badge badge-secondary badge-pill">1</span>
+                            <span class="badge badge-secondary badge-pill" th:text="${product.quantity}"></span>
                         </td>
-                        <td th:text="${product.name}">
+                        <td>
+                            <div th:text="${product.name}"></div>
                         </td>
-                        <td class="text-center"><strong th:text="${product.price} + '$'"></strong></td>
+                        <td class="text-center">
+                            <strong th:text="${product.price} + '$'"></strong>
+                        </td>
+                        <td>
+                        </td>
+                        <div th:replace="fragment/cart-product-modal :: productModal(product=${product})"></div>
                     </tr>
                     </tbody>
                 </table>
