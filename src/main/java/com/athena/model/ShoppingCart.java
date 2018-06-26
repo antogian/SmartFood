@@ -1,12 +1,16 @@
 package com.athena.model;
 
 import com.athena.entities.Product;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
+@Scope("session")
 public class ShoppingCart
 {
     private List<Product> selectedProducts;

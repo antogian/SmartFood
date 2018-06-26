@@ -7,6 +7,7 @@ import com.athena.model.ShoppingCart;
 import com.athena.services.MenuService;
 import com.athena.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Controller
+@Scope("session")
 public class MenuController
 {
     private List<Menu> allMenus;
