@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="editItemModal(orderEntry)">
+    <div class="modal fade" th:id="${orderEntry.item.id} + 'CartModal'" tabindex="-1" role="dialog"
+         data-th-attr="aria-labelledby=${orderEntry.item.id} + 'CartModalLabel'" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" th:id="${orderEntry.item.id} + 'CartModalLabel'"
+                        th:text="${orderEntry.item.name}">
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="post" th:action="@{/edit}">
+                    <input type="hidden" name="itemId" th:value="${orderEntry.item.id}" />
+                    <div class="modal-body">
+                        <div class="container">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <a th:each="modifier, i : ${orderEntry.item.modifiers}"
+                                       class="nav-item nav-link" th:classappend="${i.first} ? 'active'"
+                                       th:id="'nav-' + ${i.index} + ${#strings.trim(orderEntry.item.id)} + '-cart-tab'"
+                                       data-toggle="tab" role="tab" th:text="${modifier.name}"
+                                       th:href="'#nav-' + ${i.index} + ${#strings.trim(orderEntry.item.id)} + '-cart'"
+                                       th:attr="aria-controls='nav-' + ${i.index} + ${#strings.trim(orderEntry.item.id)} + '-cart',
+                                        aria-selected=${i.first} ? true : false"
+                                       >
+                                    </a>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div th:each="modifier, i : ${orderEntry.item.modifiers}"
+                                     class="tab-pane fade" th:classappend="${i.first} ? 'show active'"
+                                     th:id="'nav-' + ${i.index} + ${#strings.trim(orderEntry.item.id)} + '-cart'" role="tabpanel"
+                                     th:attr="aria-labelledby='nav-' + ${i.index} + ${#strings.trim(orderEntry.item.id)} + '-cart-tab'">
+                                    <p>
+                                    <div th:each="entry : ${modifier.entries}">
+                                        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                            <input type="checkbox" name="modifiers" class="custom-control-input"
+                                                   th:id="${#strings.trim(orderEntry.item.id)} + ${#strings.trim(modifier.name)} + ${entry.index} + '-cart'"
+                                                   th:checked="${entry.included}" th:value="${entry.name}"
+                                            >
+                                            <label class="custom-control-label"
+                                                   th:for="${#strings.trim(orderEntry.item.id)} + ${#strings.trim(modifier.name)} + ${entry.index} + '-cart'"
+                                                   th:text="${entry.name}">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="itemQuantity">Quantity</label>
+                            <input type="number" class="form-control" id="itemQuantity" name="itemQuantity"
+                                   placeholder="1" min="1" th:value="${orderEntry.quantity}" />
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-block btn-success"> <b> EDIT </b> </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
