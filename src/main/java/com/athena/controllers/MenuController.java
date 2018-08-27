@@ -25,19 +25,15 @@ public class MenuController
 {
     private List<Menu> allMenus;
     private ShoppingCart cart;
-    private User currentUser;
 
     @Autowired
-    MenuService menuService;
-    @Autowired
-    UserService userService;
+    private MenuService menuService;
 
     private void initialize()
     {
-        allMenus = new ArrayList<Menu>();
-        allMenus = menuService.getAllMenus();
         cart = new ShoppingCart();
-        currentUser = userService.getCurrentUser();
+        allMenus = new ArrayList<>();
+        allMenus = menuService.getAllMenus();
     }
 
     private Product getProductById(String id)
@@ -84,7 +80,7 @@ public class MenuController
         Product newItem = new Product();
         Product menuItem = getProductById(id);
 
-        newItem.setId(UUID.randomUUID().toString());
+        //newItem.setId(UUID.randomUUID().toString());
         newItem.setName(menuItem.getName());
         newItem.setDescription(menuItem.getDescription());
         newItem.setPrice(menuItem.getPrice());
@@ -118,27 +114,12 @@ public class MenuController
         return "redirect:/menu";
     }
 
-    @RequestMapping("/experiments")
-    public String experiments(Model model)
-    {
-        if(allMenus == null && cart == null)
-        {
-            initialize();
-            //populateFeed();
-        }
-        model.addAttribute("allMenus", allMenus);
-        model.addAttribute("totalItems", cart.getSelectedProducts().size());
-
-        return "experiments";
-    }
-
-    @RequestMapping(value="/checkout")
+    @RequestMapping(value="/proceed")
     public String checkout(Model model, HttpServletRequest request)
     {
-        model.addAttribute("shoppingCart", cart);
-        model.addAttribute("user", new User());
+        request.getSession().setAttribute("shoppingCart", cart);
 
-        return "checkout";
+        return "redirect:/checkout";
     }
 
     @RequestMapping(value="/checkout-bootstrap")
@@ -149,23 +130,4 @@ public class MenuController
         return "checkout-bootstrap";
     }
 
-    @RequestMapping(value="/processOrder", method=RequestMethod.POST)
-    public String processOrder(@RequestParam(value="firstName") String firstName,
-                               @RequestParam(value="lastName") String lastName, @RequestParam(value="email") String email,
-                               @RequestParam(value="phone") String phoneNumber, @RequestParam(value="city") String city,
-                               @RequestParam(value="state") String state, @RequestParam(value="zip") String zip,
-                               @RequestParam(value="address") String address, @RequestParam(value="floor") int floor)
-    {
-        currentUser.setFirstName(firstName);
-        currentUser.setLastName(lastName);
-        currentUser.setEmail(email);
-        currentUser.setPhoneNumber(phoneNumber);
-        currentUser.setCity(city);
-        currentUser.setState(state);
-        currentUser.setZip(zip);
-        currentUser.setAddress(address);
-        currentUser.setFloor(floor);
-
-        return "redirect:/checkout";
-    }
 }

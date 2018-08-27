@@ -61,6 +61,7 @@
     </div>
     <hr>
     <div class="row">
+
         <div class="col-md-8 col-12">
             <div th:replace="fragment/accordion :: menu(allMenus=${allMenus})"></div>
         </div>
@@ -72,7 +73,7 @@
             </div>
             <div th:switch="${totalItems}">
                 <div th:case="0">
-                    <div th:replace="fragment/cart-empty :: cart(shoppingCart=${shoppingCart})">
+                    <div th:replace="fragment/cart-empty :: cart">
                     </div>
                 </div>
                 <div th:case="*">

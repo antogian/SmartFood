@@ -1,31 +1,52 @@
 package com.athena.controllers;
 
+import com.athena.entities.Order;
 import com.athena.entities.User;
+import com.athena.model.ShoppingCart;
+import com.athena.services.OrderService;
 import com.athena.services.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
+@Scope("session")
 public class CheckoutController
 {
-    /*
-    User currentUser;
-
+    private User currentUser;
+    private ShoppingCart cart;
     @Autowired
-    UserService userService;
+    private UserService userService;
+    @Autowired
+    private OrderService orderService;
 
     private void initialize()
     {
         currentUser = userService.getCurrentUser();
+        cart = new ShoppingCart();
     }
 
     @RequestMapping(value="/checkout")
-    public String checkout(Model model)
+    public String checkout(Model model, HttpServletRequest request)
     {
+        initialize();
+        cart = (ShoppingCart) request.getSession().getAttribute("shoppingCart");
+
+        //--------------------------------------------------------------------------------------------------------------
+        //TODO: Must be removed
+        Order newOrder = new Order();
+        newOrder.setCart(cart);
+        orderService.insertOrder(newOrder);
+        //--------------------------------------------------------------------------------------------------------------
+
         model.addAttribute("shoppingCart", cart);
         model.addAttribute("user", new User());
 
@@ -50,8 +71,7 @@ public class CheckoutController
         currentUser.setAddress(address);
         currentUser.setFloor(floor);
 
-
         return "redirect:/checkout";
     }
-    */
+
 }

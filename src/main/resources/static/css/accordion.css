@@ -1,18 +1,18 @@
-a:hover,a:focus{
+a.custom-a:hover, a.custom-a:focus{
     text-decoration: none;
     outline: none;
 }
-#accordion .card{
+#accordion .custom-card{
     border: none;
     box-shadow: none;
     border-radius: 0;
     margin: 0 0 15px 10px;
 }
-#accordion .card-header{
+#accordion .custom-card-header{
     padding: 0;
     border-radius: 30px;
 }
-#accordion .menu-title a{
+#accordion .menu-title .custom-a{
     display: block;
     padding: 12px 20px 12px 50px;
     background: #137a91;
@@ -29,7 +29,7 @@ a:hover,a:focus{
     color: #0d345d;
     border: 1px solid #ddd;
 }
-#accordion .menu-title a:after,
+#accordion .menu-title a.custom-a:after,
 #accordion .menu-title a.collapsed:after{
     content: "\f107";
     font-family: fontawesome;
@@ -55,16 +55,16 @@ a:hover,a:focus{
     border: 1px solid #ddd;
     box-shadow: none;
 }
-#accordion .card-body{
+#accordion .custom-card-body{
     padding: 20px 25px 10px 9px;
     background: transparent;
     font-size: 14px;
-    color: #8c8c8c;
+    /*color: #8c8c8c;*/
     line-height: 25px;
     border-top: none;
     position: relative;
 }
-#accordion .card-body p{
+#accordion .custom-card-body .custom-p{
     padding-left: 25px;
     border-left: 1px dashed #8c8c8c;
 }

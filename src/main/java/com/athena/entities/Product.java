@@ -9,10 +9,12 @@ import java.util.List;
 public class Product
 {
     private String id;
+    private int pid;
     private String name;
     private String description;
     private Double price;
     private List<String> toppings;
+    private boolean included = true;
 
     private List<String> selectedToppings;
     private int quantity;
@@ -111,5 +113,25 @@ public class Product
     public void setQuantity(int quantity)
     {
         this.quantity = quantity;
+    }
+
+    public int getPid()
+    {
+        return pid;
+    }
+
+    public void setPid(int pid)
+    {
+        this.pid = pid;
+    }
+
+    public boolean isIncluded()
+    {
+        return included;
+    }
+
+    public void setIncluded(boolean included)
+    {
+        this.included = included;
     }
 }

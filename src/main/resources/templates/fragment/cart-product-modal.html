@@ -10,12 +10,12 @@
 </head>
 <body>
 <div th:fragment="productModal(product)">
-    <div class="modal fade" th:id="${product.name} + 'CartModal'" tabindex="-1" role="dialog"
-         data-th-attr="aria-labelledby=${product.name}+'CartModalLabel'" aria-hidden="true">
+    <div class="modal fade" th:id="${product.name} + 'CartModalDummy'" tabindex="-1" role="dialog"
+         data-th-attr="aria-labelledby=${product.name}+'CartModalLabelDummy'" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" th:id="${product.name} + 'CartModalLabel'" th:text="${product.name}"></h5>
+                    <h5 class="modal-title" th:id="${product.name} + 'CartModalLabelDummy'" th:text="${product.name}"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
