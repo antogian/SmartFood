@@ -60,16 +60,24 @@ public class CategoryController
     @RequestMapping("/data")
     public String menu(Model model)
     {
-        if(allCats == null)
+        try
         {
-            initialize();
+            if(allCats == null)
+            {
+                initialize();
+            }
+
+            model.addAttribute("allCats", allCats);
+            model.addAttribute("bucket", bucket);
+            model.addAttribute("totalItems", bucket.getEntries().size());
+
+            return "/data";
         }
-
-        model.addAttribute("allCats", allCats);
-        model.addAttribute("bucket", bucket);
-        model.addAttribute("totalItems", bucket.getEntries().size());
-
-        return "data";
+        catch(Exception e)
+        {
+            model.addAttribute("message", e.getMessage());
+            return "/error";
+        }
     }
 
     @RequestMapping("/data/item/{id}")

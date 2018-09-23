@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<div th:fragment="modifiersForm">
+    <form method="post" th:action="@{/add}">
+        <input type="hidden" name="itemId" th:value="${currentItem.id}" />
+        <div class="container">
+            <div class="card">
+                <div class="card-header" th:text="${currentItem.name}">
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <!--<label for="itemQuantity">Quantity</label>-->
+                                <!--<input type="number" class="form-control" id="itemQuantity" name="itemQuantity"-->
+                                <!--placeholder="1" min="1" value="1" />-->
+                                <label class="my-1 mr-2" th:for="${currentItem.id}+'quantity'">Quantity</label>
+                                <select class="custom-select my-1 mr-sm-2" th:id="${currentItem.id}+'quantity'" name="itemQuantity">
+                                    <option selected value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <!--<label for="itemQuantity">Quantity</label>-->
+                                <!--<input type="number" class="form-control" id="itemQuantity" name="itemQuantity"-->
+                                <!--placeholder="1" min="1" value="1" />-->
+                                <label class="my-1 mr-2" th:for="${currentItem.id} + 'size'">Size</label>
+                                <select class="custom-select my-1 mr-sm-2" th:id="${currentItem.id} + 'size'"
+                                        name="itemSize" th:disabled="${#lists.isEmpty(currentItem.allSizes)}? true : false">
+                                    <option th:each="size : ${currentItem.allSizes}" th:selected="${size.selected}"
+                                            th:value="${size.name}" th:text="${size.name}">
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div th:if="${not #lists.isEmpty(currentItem.modifiers)}">
+                            <div class="tab" role="tabpanel">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <li th:each="modifier, i : ${currentItem.modifiers}" class="nav-item">
+                                        <a th:href="'#tab-' + ${i.index} + ${#strings.replace(modifier.name,' ','')}"
+                                           th:attr="aria-controls='tab-' + ${i.index} + ${#strings.replace(modifier.name,' ','')}, aria-selected=${i.first} ? true : false"
+                                           th:id="'nav-' + ${i.index} + ${#strings.replace(currentItem.name,' ','')}  + '-tab'"
+                                           class="nav-link" th:classappend="${i.first} ? 'active'"
+                                           role="tab" data-toggle="tab" th:text="${modifier.name}">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div th:each="modifier, i : ${currentItem.modifiers}" role="tabpanel" class="tab-pane fade"
+                                         th:classappend="${i.first} ? 'show active'" th:id="'tab-' + ${i.index} + ${#strings.replace(modifier.name,' ','')}"
+                                         th:attr="aria-labelledby='nav-' + ${i.index} + ${#strings.replace(currentItem.name,' ','')}  + '-tab'">
+                                        <div th:each="entry : ${modifier.entries}" class="custom-control custom-checkbox my-1 mr-sm-2">
+                                            <input type="checkbox" name="modifiers" class="custom-control-input"
+                                                   th:id="${modifier.name} + ${entry.index}"
+                                                   th:checked="${entry.selected}" th:value="${entry.name}"
+                                            >
+                                            <label class="custom-control-label toggle-qualifiers"
+                                                   th:for="${modifier.name} + ${entry.index}"
+                                                   th:text="${entry.name}">
+                                            </label>
+                                            <div class="reveal-if-active">
+                                                <div class="row">
+                                                    <div class="col" th:if="${modifier.halfEnabled} == true">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" th:id="'halfRadio1' + ${i.index} + ${entry.index}"
+                                                                   th:name="'halfRadio' + ${i.index} + ${entry.index}" class="custom-control-input" th:checked="'true'">
+                                                            <label class="custom-control-label" th:for="'halfRadio1' + ${i.index} + ${entry.index}">Full</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" th:id="'halfRadio2' + ${i.index} + ${entry.index}" th:checked="'false'"
+                                                                   th:name="'halfRadio' + ${i.index} + ${entry.index}" class="custom-control-input">
+                                                            <label class="custom-control-label" th:for="'halfRadio2' + ${i.index} + ${entry.index}">1st Half</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" th:id="'halfRadio3' + ${i.index} + ${entry.index}" th:checked="'false'"
+                                                                   th:name="'halfRadio' + ${i.index} + ${entry.index}" class="custom-control-input">
+                                                            <label class="custom-control-label" th:for="'halfRadio3' + ${i.index} + ${entry.index}">2nd Half</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col" th:if="${modifier.qualifiersEnabled == true}">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" th:id="'qualifiersRadio1' + ${i.index} + ${entry.index}" th:checked="'false'"
+                                                                   th:name="'qualifiersRadio' + ${i.index} + ${entry.index}" class="custom-control-input">
+                                                            <label class="custom-control-label" th:for="'qualifiersRadio1' + ${i.index} + ${entry.index}">Lite</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" th:id="'qualifiersRadio2' + ${i.index} + ${entry.index}" th:checked="'false'"
+                                                                   th:name="'qualifiersRadio' + ${i.index} + ${entry.index}" class="custom-control-input">
+                                                            <label class="custom-control-label" th:for="'qualifiersRadio2' + ${i.index} + ${entry.index}">Extra</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" th:id="'qualifiersRadio3' + ${i.index} + ${entry.index}" th:checked="'false'"
+                                                                   th:name="'qualifiersRadio' + ${i.index} + ${entry.index}" class="custom-control-input">
+                                                            <label class="custom-control-label" th:for="'qualifiersRadio3' + ${i.index} + ${entry.index}">OnSide</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--<nav>-->
+                        <!--<div class="nav nav-tabs" id="nav-tab" role="tablist">-->
+                        <!--<a th:each="modifier, i : ${currentItem.modifiers}"-->
+                        <!--class="nav-item nav-link" th:classappend="${i.first} ? 'active'"-->
+                        <!--th:id="'nav-' + ${i.index} + ${#strings.trim(currentItem.name)}  + '-tab'" data-toggle="tab"-->
+                        <!--th:href="'#nav-' + ${i.index} + ${#strings.trim(currentItem.name)}" role="tab"-->
+                        <!--th:attr="aria-controls='nav-' + ${i.index} + ${#strings.trim(currentItem.name)}, aria-selected=${i.first} ? true : false"-->
+                        <!--th:text="${modifier.name}">-->
+                        <!--</a>-->
+                        <!--</div>-->
+                        <!--</nav>-->
+                        <!--<div class="tab-content" id="nav-tabContent">-->
+                        <!--<div th:each="modifier, i : ${currentItem.modifiers}"-->
+                        <!--class="tab-pane fade" th:classappend="${i.first} ? 'show active'"-->
+                        <!--th:id="'nav-' + ${i.index} + ${#strings.trim(currentItem.name)}" role="tabpanel"-->
+                        <!--th:attr="aria-labelledby='nav-' + ${i.index} + ${#strings.trim(currentItem.name)} + '-tab'">-->
+
+                        <!--<p th:if="${modifier.requiredEntries} &gt; 0"-->
+                        <!--th:text="'You need to check at least ' + ${modifier.requiredEntries} + ' of the following'">-->
+                        <!--</p>-->
+                        <!--<p th:if="${modifier.freeEntries} &gt; 0"-->
+                        <!--th:text="'You may choose up to ' + ${modifier.freeEntries} + ' of the following for free'">-->
+                        <!--</p>-->
+                        <!--<p>-->
+                        <!---->
+                        <!--</p>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="reset" class="btn btn-block btn-light">Reset</button>
+                    <button type="submit" class="btn btn-block btn-success">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
