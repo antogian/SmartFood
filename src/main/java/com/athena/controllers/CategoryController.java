@@ -71,7 +71,7 @@ public class CategoryController
             model.addAttribute("bucket", bucket);
             model.addAttribute("totalItems", bucket.getEntries().size());
 
-            return "/data";
+            return "data";
         }
         catch(Exception e)
         {

@@ -62,7 +62,7 @@
     <hr>
     <div class="row">
         <div class="col-md-8 col-12">
-            <div th:replace="/fragment/modifiers :: modifiersForm"></div>
+            <div th:replace="fragment/modifiers :: modifiersForm"></div>
         </div>
         <div class="col-md-4 col-12 mb-4">
             <!-- <div class="d-sm-block d-none"> -->
@@ -71,11 +71,11 @@
             </div>
             <div th:switch="${totalItems}">
                 <div th:case="0">
-                    <div th:replace="/fragment/cart-empty :: cart">
+                    <div th:replace="fragment/cart-empty :: cart">
                     </div>
                 </div>
                 <div th:case="*">
-                    <div th:replace="/fragment/cart-data :: cart-data(bucket=${bucket})">
+                    <div th:replace="fragment/cart-data :: cart-data(bucket=${bucket})">
                     </div>
                 </div>
             </div>
