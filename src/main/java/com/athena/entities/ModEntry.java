@@ -4,26 +4,15 @@ public class ModEntry
 {
     private String name;
     private int index;
-    private double cost;
+    private double[] cost;
+    private double[] halfCost;
 
     public ModEntry()
     {
         name = "";
-        cost = 0.00;
     }
 
-    public ModEntry(String name, double cost)
-    {
-        this.name = name;
-        this.cost = cost;
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    public void setName(String name)
+    public ModEntry(String name)
     {
         this.name = name;
     }
@@ -38,13 +27,33 @@ public class ModEntry
         this.index = index;
     }
 
-    public double getCost()
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public double[] getCost()
     {
         return cost;
     }
 
-    public void setCost(double cost)
+    public void setCost(double[] cost)
     {
         this.cost = cost;
+    }
+
+    public double[] getHalfCost()
+    {
+        return halfCost;
+    }
+
+    public void setHalfCost(double[] halfCost)
+    {
+        this.halfCost = halfCost;
     }
 }

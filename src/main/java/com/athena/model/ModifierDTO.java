@@ -12,6 +12,8 @@ public class ModifierDTO
     private double platterPrice = 0.0;
     private boolean halfEnabled = false;
     private boolean qualifiersEnabled = true;
+    private int freeEntries;
+    private int requiredEntries;
 
     public String getName()
     {
@@ -71,5 +73,25 @@ public class ModifierDTO
     public void setQualifiersEnabled(boolean qualifiersEnabled)
     {
         this.qualifiersEnabled = qualifiersEnabled;
+    }
+
+    public int getFreeEntries()
+    {
+        return freeEntries;
+    }
+
+    public void setFreeEntries(int freeEntries)
+    {
+        this.freeEntries = freeEntries;
+    }
+
+    public int getRequiredEntries()
+    {
+        return requiredEntries;
+    }
+
+    public void setRequiredEntries(int requiredEntries)
+    {
+        this.requiredEntries = requiredEntries;
     }
 }

@@ -1,16 +1,17 @@
 package com.athena.entities;
 
+import com.athena.model.Bucket;
 import com.athena.model.ShoppingCart;
 
 public class Order
 {
     private User user;
-    private ShoppingCart cart;
+    private Bucket cart;
 
     public Order()
     {
         user = new User();
-        cart = new ShoppingCart();
+        cart = new Bucket();
     }
 
     public User getUser()
@@ -23,12 +24,12 @@ public class Order
         this.user = user;
     }
 
-    public ShoppingCart getCart()
+    public Bucket getCart()
     {
         return cart;
     }
 
-    public void setCart(ShoppingCart cart)
+    public void setCart(Bucket cart)
     {
         this.cart = cart;
     }

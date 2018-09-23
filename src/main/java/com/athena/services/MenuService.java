@@ -2,22 +2,103 @@ package com.athena.services;
 
 import com.athena.dao.MenuDAO;
 import com.athena.entities.Menu;
+import com.athena.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class MenuService
 {
-    @Autowired
-    MenuDAO menuDao;
+    private MenuDAO menuDao;
+    private CategoryService categoryService;
 
-    public MenuService() { }
+    @Autowired
+    public MenuService(CategoryService categoryService)
+    {
+        this.categoryService = categoryService;
+    }
 
     public List<Menu> getAllMenus()
     {
         return menuDao.getAllMenus();
     }
+
+    public ItemDTO getItemById(List<CategoryDTO> allCats, String id)
+    {
+        for (int i=0; i<allCats.size(); i++)
+        {
+            for(int j=0; j<allCats.get(i).getAllItems().size(); j++)
+            {
+                if(id.equalsIgnoreCase(allCats.get(i).getAllItems().get(j).getId()))
+                {
+                    return allCats.get(i).getAllItems().get(j);
+                }
+            }
+        }
+        return new ItemDTO();
+    }
+
+    public void removeItemById(Bucket bucket, String name)
+    {
+        bucket.removeEntryById(name);
+    }
+
+    public void checkModifiers(ItemDTO item, List<ModifierDTO> modifiers)
+    {
+        List<ModEntryDTO> selectedEntries = new ArrayList<>();
+        for (ModifierDTO mod : modifiers)
+        {
+            for (ModEntryDTO entry : mod.getEntries())
+            {
+                if (entry.isSelected())
+                    selectedEntries.add(entry);
+            }
+        }
+        for (ModifierDTO mod : item.getModifiers())
+        {
+            for (ModEntryDTO entry : mod.getEntries())
+            {
+                for(ModEntryDTO selectedEntry : selectedEntries)
+                {
+                    if(entry.getName().equalsIgnoreCase(selectedEntry.getName()))
+                    {
+                        entry.setSelected(selectedEntry.isSelected());
+                        entry.setHalfOption(selectedEntry.getHalfOption());
+                        entry.setQualifier(selectedEntry.getQualifier());
+                    }
+                }
+            }
+        }
+    }
+
+    public void checkSizes(ItemDTO item, String name)
+    {
+        if(item.getAllSizes() == null)
+            return;
+
+        for(SizeDTO size : item.getAllSizes())
+        {
+            if(size.getName().equalsIgnoreCase(name))
+                size.setSelected(true);
+            else
+                size.setSelected(false);
+        }
+    }
+
+    public BucketEntry getEntryFromCart(Bucket bucket, String id)
+    {
+        for (BucketEntry entry : bucket.getEntries())
+        {
+            if(id.equalsIgnoreCase(entry.getItem().getId()))
+            {
+                return entry;
+            }
+        }
+        return new BucketEntry();
+    }
+
 
 }

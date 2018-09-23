@@ -1,8 +1,7 @@
 package com.athena.model;
 
-import com.athena.entities.Modifier;
-import com.athena.entities.Size;
-
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 
 public class ItemDTO
@@ -11,6 +10,7 @@ public class ItemDTO
     private String id;
     private int index;
     private double totalCost;
+
     private List<SizeDTO> allSizes;
     private List<ModifierDTO> modifiers;
     private int[] freeModEntries;
@@ -77,11 +77,54 @@ public class ItemDTO
 
     public double getTotalCost()
     {
-        return totalCost;
+        BigDecimal bd = new BigDecimal(Double.toString(totalCost));
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+
+        //return bd.doubleValue();
+
+        return bd.doubleValue();
     }
 
     public void setTotalCost(double totalCost)
     {
         this.totalCost = totalCost;
+    }
+
+    public void calculateTotalCost()
+    {
+        double cost = 0.0;
+        int index = 1;
+        if(!(allSizes == null || allSizes.isEmpty()))
+        {
+            for(SizeDTO size : allSizes)
+            {
+                if(size.isSelected())
+                {
+                    cost = size.getCost();
+                    index = size.getIndex();
+                }
+            }
+        }
+        else
+        {
+            cost = totalCost;
+        }
+        if(!(modifiers == null || modifiers.isEmpty()))
+        {
+            for(ModifierDTO modifier : modifiers)
+            {
+                if(!(modifier.getEntries() == null || modifier.getEntries().isEmpty()))
+                {
+                    for(ModEntryDTO entry : modifier.getEntries())
+                    {
+                        if(entry.isSelected())
+                        {
+                            cost += entry.getTotalCost(index-1);
+                        }
+                    }
+                }
+            }
+        }
+        totalCost = cost;
     }
 }

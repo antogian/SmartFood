@@ -1,18 +1,16 @@
 package com.athena.controllers;
 
-import com.athena.entities.Menu;
-import com.athena.entities.Product;
-import com.athena.entities.User;
-import com.athena.model.ShoppingCart;
+import com.athena.model.*;
+import com.athena.services.CategoryService;
+import com.athena.services.ItemService;
 import com.athena.services.MenuService;
-import com.athena.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -23,111 +21,69 @@ import java.util.UUID;
 @Scope("session")
 public class MenuController
 {
-    private List<Menu> allMenus;
-    private ShoppingCart cart;
+    private List<CategoryDTO> allCats;
+    private Bucket bucket;
+    private ItemDTO selectedItem = new ItemDTO();
+
+    private CategoryService categoryService;
+    private ItemService itemService;
+    private MenuService menuService;
 
     @Autowired
-    private MenuService menuService;
+    public MenuController(CategoryService categoryService, ItemService itemService, MenuService menuService)
+    {
+        this.categoryService = categoryService;
+        this.itemService = itemService;
+        this.menuService = menuService;
+    }
 
     private void initialize()
     {
-        cart = new ShoppingCart();
-        allMenus = new ArrayList<>();
-        allMenus = menuService.getAllMenus();
-    }
-
-    private Product getProductById(String id)
-    {
-        for(int i = 0; i<allMenus.size(); i++)
+        bucket = new Bucket();
+        allCats = new ArrayList<>();
+        try
         {
-            for(int j=0; j<allMenus.get(i).getProductList().size(); j++)
-            {
-                if (allMenus.get(i).getProductList().get(j).getId().equals(id))
-                {
-                    return allMenus.get(i).getProductList().get(j);
-                }
-            }
+            allCats = categoryService.getAllCats();
         }
-        return new Product();
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
-    private void removeItemFromBucket(String id)
+    private void checkSelectedItem(String id)
     {
-        cart.removeProduct(id);
+        if(id == null || id.equalsIgnoreCase(""))
+            selectedItem = new ItemDTO();
+        else
+            selectedItem = menuService.getItemById(allCats, id);
     }
 
     @RequestMapping("/menu")
     public String menu(Model model)
     {
-        if(allMenus == null && cart == null)
+        if(allCats == null)
         {
             initialize();
             //populateFeed();
         }
-        model.addAttribute("allMenus", allMenus);
-        model.addAttribute("shoppingCart", cart);
-        model.addAttribute("totalItems", cart.getSelectedProducts().size());
-        //model.addAttribute("selectedProduct", new Product());
+
+        model.addAttribute("allCats", allCats);
+        model.addAttribute("selectedItem", selectedItem);
+        model.addAttribute("bucket", bucket);
+        model.addAttribute("totalItems", bucket.getEntries().size());
 
         return "menu";
     }
 
-    @RequestMapping(value="/addItem", method=RequestMethod.POST)
-    public String addItemToCart(@RequestParam(value="productID") String id,
-                                @RequestParam(value="checkedToppings", required=false) List<String> toppings,
-                                @RequestParam(value="productQuantity") int quantity)
+    @RequestMapping("/item/{id}")
+    @ResponseStatus(value = HttpStatus.OK)
+    public void item(@PathVariable("id") String id,Model model)
     {
-        Product newItem = new Product();
-        Product menuItem = getProductById(id);
-
-        //newItem.setId(UUID.randomUUID().toString());
-        newItem.setName(menuItem.getName());
-        newItem.setDescription(menuItem.getDescription());
-        newItem.setPrice(menuItem.getPrice());
-        newItem.setToppings(menuItem.getToppings());
-        newItem.setSelectedToppings(toppings);
-        newItem.setQuantity(quantity);
-
-        cart.addProduct(newItem);
-
-        return "redirect:/menu";
-    }
-
-    @RequestMapping(value="/editItem", method=RequestMethod.POST)
-    public String editItem(@RequestParam(value="productID") String id,
-                                @RequestParam(value="checkedToppings", required=false) List<String> toppings,
-                                @RequestParam(value="productQuantity") int quantity)
-    {
-        Product currentItem = cart.getProductById(id);
-
-        currentItem.setSelectedToppings(toppings);
-        currentItem.setQuantity(quantity);
-
-        return "redirect:/menu";
-    }
-
-    @RequestMapping({"/removeItem"})
-    public String removeItem(@RequestParam(value = "code") String code)
-    {
-        removeItemFromBucket(code);
-
-        return "redirect:/menu";
-    }
-
-    @RequestMapping(value="/proceed")
-    public String checkout(Model model, HttpServletRequest request)
-    {
-        request.getSession().setAttribute("shoppingCart", cart);
-
-        return "redirect:/checkout";
-    }
-
-    @RequestMapping(value="/checkout-bootstrap")
-    public String checkoutBootstrap(Model model)
-    {
-        model.addAttribute("shoppingCart", cart);
-
-        return "checkout-bootstrap";
+        checkSelectedItem(id);
+        model.asMap().replace("selectedItem", selectedItem);
+//        int x;
+//        return "redirect:/menu";
     }
 
 }

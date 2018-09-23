@@ -14,17 +14,18 @@ import java.util.List;
 @Service
 public class ModifierService
 {
+    private ModEntryService modEntryService; //TODO: Bad practice.
+
     @Autowired
-    ModEntryService modEntryService; //TODO: Bad practice.
-
-    public ModifierService()
+    public ModifierService(ModEntryService modEntryService)
     {
-
+        this.modEntryService = modEntryService;
     }
 
     public List<ModifierDTO> getModifiers(Item item)
     {
         List<ModifierDTO> allModifiers = new ArrayList<>();
+
         for(int i=0; i<item.getModifiers().size(); i++)
         {
             ModifierDTO modifierDto = new ModifierDTO();
@@ -45,9 +46,15 @@ public class ModifierService
                 allEntries = modEntryService.getModEntries(item.getModifiers().get(i), item.getInclusions()[i]);
                 modifierDto.setEntries(allEntries);
             }
+            if(item.getRequiredModEntries()[i] > 0 )
+            {
+                modifierDto.setFreeEntries(item.getFreeModEntries()[i]);
+                modifierDto.setRequiredEntries(item.getRequiredModEntries()[i]);
+            }
 
             allModifiers.add(modifierDto);
         }
+
         return allModifiers;
     }
 
@@ -60,11 +67,13 @@ public class ModifierService
         newModifier.setPlatter(mod.isPlatter());
         newModifier.setPlatterPrice(mod.getPlatterPrice());
         newModifier.setQualifiersEnabled(mod.isQualifiersEnabled());
+        newModifier.setFreeEntries(mod.getFreeEntries());
+        newModifier.setRequiredEntries(mod.getRequiredEntries());
 
         List<ModEntryDTO> allEntries = new ArrayList<>();
         for(ModEntryDTO entryDto : mod.getEntries())
         {
-            allEntries.add(modEntryService.getValues(entryDto));
+            allEntries.add(modEntryService.getValues(entryDto, mod.isHalfEnabled()));
         }
         newModifier.setEntries(allEntries);
 

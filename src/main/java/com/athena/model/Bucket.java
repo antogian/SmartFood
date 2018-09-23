@@ -3,6 +3,8 @@ package com.athena.model;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +32,12 @@ public class Bucket
 
     public double getTotalCost()
     {
-        return totalCost;
+        BigDecimal bd = new BigDecimal(Double.toString(totalCost));
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+
+        //return bd.doubleValue();
+
+        return bd.doubleValue();
     }
 
     public void setTotalCost(double totalCost)

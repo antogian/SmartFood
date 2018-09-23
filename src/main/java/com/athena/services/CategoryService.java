@@ -17,13 +17,14 @@ import java.util.List;
 @Service
 public class CategoryService
 {
-    @Autowired
-    CategoryDAO catDao; //TODO: Bad practice.
-    @Autowired
-    ItemService itemService; //TODO: Bad practice.
+    private CategoryDAO catDao;
+    private ItemService itemService;
 
-    public CategoryService()
+    @Autowired
+    public CategoryService(CategoryDAO catDao, ItemService itemService)
     {
+        this.catDao = catDao;
+        this.itemService = itemService;
     }
 
     public List<CategoryDTO> getAllCats() throws Exception

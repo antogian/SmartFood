@@ -3,7 +3,6 @@ package com.athena.services;
 import com.athena.entities.ModEntry;
 import com.athena.entities.Modifier;
 import com.athena.model.ModEntryDTO;
-import com.athena.model.ModifierDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -22,8 +21,35 @@ public class ModEntryService
 
             entryDto.setName(modEntry.getName());
             entryDto.setIndex(modEntry.getIndex());
-            entryDto.setCost(modEntry.getCost());
+
             entryDto.setIncluded(getInclusion(entryDto.getIndex(), inclusions));
+
+            if(entryDto.isIncluded())
+                entryDto.setCost(new double[5]);
+            else
+            {
+                double[] cost = new double[5];
+                for(int i=0; i<modEntry.getCost().length; i++)
+                {
+                    cost[i] = modEntry.getCost()[i];
+                }
+                entryDto.setCost(cost);
+            }
+
+            if(modifier.isHalfEnabled())
+            {
+                if(entryDto.isIncluded())
+                    entryDto.setHalfCost(new double[5]);
+                else
+                {
+                    double[] halfCost = new double[5];
+                    for(int i=0; i<modEntry.getHalfCost().length; i++)
+                    {
+                        halfCost[i] = modEntry.getHalfCost()[i];
+                    }
+                    entryDto.setHalfCost(halfCost);
+                }
+            }
 
             allEntries.add(entryDto);
         }
@@ -43,13 +69,30 @@ public class ModEntryService
         return false;
     }
 
-    public ModEntryDTO getValues(ModEntryDTO modEntry)
+    public ModEntryDTO getValues(ModEntryDTO modEntry, boolean isHalfEnabled)
     {
         ModEntryDTO newEntry = new ModEntryDTO();
         newEntry.setName(modEntry.getName());
-        newEntry.setCost(modEntry.getCost());
+
+        double[] cost = new double[5];
+        for(int i=0; i<modEntry.getCost().length; i++)
+        {
+            cost[i] = modEntry.getCost()[i];
+        }
+        newEntry.setCost(cost);
+
+        if(isHalfEnabled)
+        {
+            double[] halfCost = new double[5];
+            for(int i=0; i<modEntry.getHalfCost().length; i++)
+            {
+                halfCost[i] = modEntry.getHalfCost()[i];
+            }
+            newEntry.setHalfCost(halfCost);
+        }
+
         newEntry.setIndex(modEntry.getIndex());
-        newEntry.setIncluded(modEntry.isIncluded());
+        newEntry.setSelected(modEntry.isSelected());
 
         return newEntry;
     }

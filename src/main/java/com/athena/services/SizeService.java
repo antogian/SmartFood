@@ -18,11 +18,14 @@ public class SizeService
         {
             return  allSizes;
         }
+        int index = 1;
         for(String name : size.getNames())
         {
             SizeDTO newSize = new SizeDTO();
+            newSize.setIndex(index);
             newSize.setName(name);
             allSizes.add(newSize);
+            index++;
         }
 
         return allSizes;

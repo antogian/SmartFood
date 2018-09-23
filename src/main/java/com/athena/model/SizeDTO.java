@@ -3,6 +3,7 @@ package com.athena.model;
 public class SizeDTO
 {
     private String name;
+    private int index;
     private boolean selected = false;
     private double cost;
 
@@ -25,6 +26,16 @@ public class SizeDTO
     public void setName(String name)
     {
         this.name = name;
+    }
+
+    public int getIndex()
+    {
+        return index;
+    }
+
+    public void setIndex(int index)
+    {
+        this.index = index;
     }
 
     public boolean isSelected()

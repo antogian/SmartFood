@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <body>
 <div th:fragment="editItemModal(orderEntry)">
-    <div class="modal fade" th:id="${orderEntry.item.id} + 'CartModal'" tabindex="-1" role="dialog"
-         data-th-attr="aria-labelledby=${orderEntry.item.id} + 'CartModalLabel'" aria-hidden="true">
+    <div class="modal fade" th:id="'cartModal' + ${orderEntry.item.id}" tabindex="-1" role="dialog"
+         data-th-attr="aria-labelledby='cartModalLabel' + ${orderEntry.item.id}" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" th:id="${orderEntry.item.id} + 'CartModalLabel'"
+                    <h5 class="modal-title" th:id="'cartModalLabel' + ${orderEntry.item.id}"
                         th:text="${orderEntry.item.name}">
                     </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -41,7 +41,7 @@
                                         <div class="custom-control custom-checkbox my-1 mr-sm-2">
                                             <input type="checkbox" name="modifiers" class="custom-control-input"
                                                    th:id="${#strings.trim(orderEntry.item.id)} + ${#strings.trim(modifier.name)} + ${entry.index} + '-cart'"
-                                                   th:checked="${entry.included}" th:value="${entry.name}"
+                                                   th:checked="${entry.selected}" th:value="${entry.name}"
                                             >
                                             <label class="custom-control-label"
                                                    th:for="${#strings.trim(orderEntry.item.id)} + ${#strings.trim(modifier.name)} + ${entry.index} + '-cart'"

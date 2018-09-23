@@ -3,14 +3,14 @@ package com.athena.controllers;
 import com.athena.model.*;
 import com.athena.services.CategoryService;
 import com.athena.services.ItemService;
+import com.athena.services.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -21,11 +21,19 @@ public class CategoryController
 {
     private List<CategoryDTO> allCats;
     private Bucket bucket;
+    private ItemDTO currentItem = new ItemDTO();
+
+    private CategoryService categoryService;
+    private ItemService itemService;
+    private MenuService menuService;
 
     @Autowired
-    CategoryService categoryService;
-    @Autowired
-    ItemService itemService;
+    public CategoryController(CategoryService categoryService, ItemService itemService, MenuService menuService)
+    {
+        this.categoryService = categoryService;
+        this.itemService = itemService;
+        this.menuService = menuService;
+    }
 
     private void initialize()
     {
@@ -41,54 +49,12 @@ public class CategoryController
         }
     }
 
-    private ItemDTO getItemById(String id)
+    private void checkSelectedItem(String id)
     {
-        for (int i=0; i<allCats.size(); i++)
-        {
-          for(int j=0; j<allCats.get(i).getAllItems().size(); j++)
-          {
-              if(id.equalsIgnoreCase(allCats.get(i).getAllItems().get(j).getId()))
-              {
-                  return allCats.get(i).getAllItems().get(j);
-              }
-          }
-        }
-        return new ItemDTO();
-    }
-
-    private BucketEntry getEntryFromCart(String id)
-    {
-        for (BucketEntry entry : bucket.getEntries())
-        {
-            if(id.equalsIgnoreCase(entry.getItem().getId()))
-            {
-                return entry;
-            }
-        }
-        return new BucketEntry();
-    }
-
-    private void checkModifiers(ItemDTO item, List<String> names)
-    {
-        for(ModifierDTO mod : item.getModifiers())
-        {
-            for(ModEntryDTO entry : mod.getEntries())
-            {
-                if(names.contains(entry.getName()))
-                {
-                    entry.setIncluded(true);
-                }
-                else
-                {
-                    entry.setIncluded(false);
-                }
-            }
-        }
-    }
-
-    private void removeItemById(String name)
-    {
-        bucket.removeEntryById(name);
+        if(id == null || id.equalsIgnoreCase(""))
+            currentItem = new ItemDTO();
+        else
+            currentItem = menuService.getItemById(allCats, id);
     }
 
     @RequestMapping("/data")
@@ -97,8 +63,8 @@ public class CategoryController
         if(allCats == null)
         {
             initialize();
-            //populateFeed();
         }
+
         model.addAttribute("allCats", allCats);
         model.addAttribute("bucket", bucket);
         model.addAttribute("totalItems", bucket.getEntries().size());
@@ -106,19 +72,35 @@ public class CategoryController
         return "data";
     }
 
+    @RequestMapping("/data/item/{id}")
+    public String item(@PathVariable("id") String id, Model model)
+    {
+        checkSelectedItem(id);
+        model.addAttribute("bucket", bucket);
+        model.addAttribute("totalItems", bucket.getEntries().size());
+        model.addAttribute("currentItem", currentItem);
+        model.addAttribute("modifiers", currentItem.getModifiers());
+
+        return "item";
+    }
+
     @RequestMapping(value="/add", method=RequestMethod.POST)
     public String addItemToCart(@RequestParam(value="itemId") String id,
-                                @RequestParam(value="modifiers", required=false) List<String> modEntries,
-                                @RequestParam(value="itemQuantity") int quantity)
+                                @ModelAttribute("currentItem") ItemDTO item,
+                                @RequestParam(value="itemQuantity") int quantity,
+                                @RequestParam(value="itemSize", required = false) String sizeName)
     {
-        ItemDTO newItem = getItemById(id);
+        ItemDTO newItem = menuService.getItemById(allCats, id);
         ItemDTO bucketItem = itemService.getItemByValue(newItem);
         bucketItem.setId(UUID.randomUUID().toString());
 
         BucketEntry newEntry = new BucketEntry();
 
-        if(!(modEntries == null || modEntries.isEmpty()))
-            checkModifiers(bucketItem, modEntries);
+        //TODO: Correct no toppings scenario
+        menuService.checkModifiers(bucketItem, item.getModifiers());
+
+        menuService.checkSizes(bucketItem, sizeName);
+        bucketItem.calculateTotalCost();
 
         newEntry.setItem(bucketItem);
         newEntry.setQuantity(quantity);
@@ -129,24 +111,50 @@ public class CategoryController
 
     @RequestMapping(value="/edit", method=RequestMethod.POST)
     public String editITem(@RequestParam(value="itemId") String id,
-                                @RequestParam(value="modifiers", required=false) List<String> modEntries,
-                                @RequestParam(value="itemQuantity") int quantity)
+                           @ModelAttribute("currentItem") ItemDTO item,
+                           @RequestParam(value="itemQuantity") int quantity,
+                           @RequestParam(value="itemSize", required = false) String sizeName)
     {
-        BucketEntry newEntry = getEntryFromCart(id);
+        BucketEntry newEntry = menuService.getEntryFromCart(bucket, id);
 
-        if(!(modEntries == null || modEntries.isEmpty()))
-            checkModifiers(newEntry.getItem(), modEntries);
-
+        menuService.checkModifiers(newEntry.getItem(), item.getModifiers());
+        newEntry.getItem().calculateTotalCost();
+        menuService.checkSizes(newEntry.getItem(), sizeName);
         newEntry.setQuantity(quantity);
 
+        bucket.removeEntryById(id);
+        bucket.addEntry(newEntry);
+
         return "redirect:/data";
+    }
+
+    @RequestMapping("/data/item/edit/{id}")
+    public String edit(@PathVariable("id") String id, Model model)
+    {
+        BucketEntry newEntry = menuService.getEntryFromCart(bucket, id);
+        currentItem = newEntry.getItem();
+        //TODO: Quantity isn't initiated.
+        model.addAttribute("bucket", bucket);
+        model.addAttribute("totalItems", bucket.getEntries().size());
+        model.addAttribute("currentItem", currentItem);
+        model.addAttribute("modifiers", currentItem.getModifiers());
+
+        return "edit";
     }
 
     @RequestMapping({"/delete"})
     public String removeItem(@RequestParam(value = "item") String id)
     {
-        removeItemById(id);
+        menuService.removeItemById(bucket, id);
 
         return "redirect:/data";
+    }
+
+    @RequestMapping(value="/proceed")
+    public String checkout(HttpServletRequest request)
+    {
+        request.getSession().setAttribute("shoppingCart", bucket);
+
+        return "checkout";
     }
 }

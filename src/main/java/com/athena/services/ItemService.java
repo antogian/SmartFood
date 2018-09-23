@@ -15,10 +15,15 @@ import java.util.UUID;
 @Service
 public class ItemService
 {
+    private ModifierService modifierService;
+    private SizeService sizeService;
+
     @Autowired
-    ModifierService modifierService;
-    @Autowired
-    SizeService sizeService;
+    public ItemService(ModifierService modifierService, SizeService sizeService)
+    {
+        this.modifierService = modifierService;
+        this.sizeService = sizeService;
+    }
 
     List<ItemDTO> getItems(Category category)
     {
@@ -32,6 +37,8 @@ public class ItemService
             itemDto.setId(UUID.randomUUID().toString());
             itemDto.setIndex(item.getIndex());
             itemDto.setFreeModEntries(item.getFreeModEntries());
+            //----------------------------------------------------------------------------------------------------------
+
             //----------------------------------------------------------------------------------------------------------
             List<SizeDTO> allSizes = new ArrayList<>();
             if(item.getSize() == null)
@@ -82,6 +89,21 @@ public class ItemService
             allModifiers.add(modifierService.getValues(mod));
         }
         newItem.setModifiers(allModifiers);
+
+        List<SizeDTO> allSizes = new ArrayList<>();
+        if(!(item.getAllSizes() == null || item.getAllSizes().isEmpty()))
+        {
+            for(SizeDTO size : item.getAllSizes())
+            {
+                SizeDTO newSize = new SizeDTO();
+                newSize.setName(size.getName());
+                newSize.setIndex(size.getIndex());
+                newSize.setSelected(size.isSelected());
+                newSize.setCost(size.getCost());
+                allSizes.add(newSize);
+            }
+        }
+        newItem.setAllSizes(allSizes);
 
         return newItem;
     }

@@ -2,6 +2,7 @@ package com.athena.controllers;
 
 import com.athena.entities.Order;
 import com.athena.entities.User;
+import com.athena.model.Bucket;
 import com.athena.model.ShoppingCart;
 import com.athena.services.OrderService;
 import com.athena.services.UserService;
@@ -22,23 +23,29 @@ import javax.servlet.http.HttpServletRequest;
 public class CheckoutController
 {
     private User currentUser;
-    private ShoppingCart cart;
-    @Autowired
+    private Bucket cart;
+
     private UserService userService;
-    @Autowired
     private OrderService orderService;
+
+    @Autowired
+    public CheckoutController(UserService userService, OrderService orderService)
+    {
+        this.userService = userService;
+        this.orderService = orderService;
+    }
 
     private void initialize()
     {
         currentUser = userService.getCurrentUser();
-        cart = new ShoppingCart();
+        cart = new Bucket();
     }
 
     @RequestMapping(value="/checkout")
     public String checkout(Model model, HttpServletRequest request)
     {
         initialize();
-        cart = (ShoppingCart) request.getSession().getAttribute("shoppingCart");
+        cart = (Bucket) request.getSession().getAttribute("shoppingCart");
 
         //--------------------------------------------------------------------------------------------------------------
         //TODO: Must be removed
@@ -47,7 +54,7 @@ public class CheckoutController
         orderService.insertOrder(newOrder);
         //--------------------------------------------------------------------------------------------------------------
 
-        model.addAttribute("shoppingCart", cart);
+        model.addAttribute("bucket", cart);
         model.addAttribute("user", new User());
 
         return "checkout";
