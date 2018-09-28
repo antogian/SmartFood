@@ -56,6 +56,7 @@ public class ItemService
 
                 itemDto.setAllSizes(allSizes);
             }
+            itemDto.setCost(item.getCost()[0]);
             itemDto.setTotalCost(item.getCost()[0]);
             //----------------------------------------------------------------------------------------------------------
             List<ModifierDTO> allModifiers = new ArrayList<>();

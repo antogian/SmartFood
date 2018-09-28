@@ -9,6 +9,7 @@ public class ItemDTO
     private String name;
     private String id;
     private int index;
+    private double cost;
     private double totalCost;
 
     private List<SizeDTO> allSizes;
@@ -75,6 +76,16 @@ public class ItemDTO
         this.allSizes = allSizes;
     }
 
+    public double getCost()
+    {
+        return cost;
+    }
+
+    public void setCost(double cost)
+    {
+        this.cost = cost;
+    }
+
     public double getTotalCost()
     {
         BigDecimal bd = new BigDecimal(Double.toString(totalCost));
@@ -92,7 +103,7 @@ public class ItemDTO
 
     public void calculateTotalCost()
     {
-        double cost = 0.0;
+        double tempCost = cost;
         int index = 1;
         if(!(allSizes == null || allSizes.isEmpty()))
         {
@@ -100,14 +111,14 @@ public class ItemDTO
             {
                 if(size.isSelected())
                 {
-                    cost = size.getCost();
+                    tempCost = size.getCost();
                     index = size.getIndex();
                 }
             }
         }
         else
         {
-            cost = totalCost;
+            tempCost = cost;
         }
         if(!(modifiers == null || modifiers.isEmpty()))
         {
@@ -119,12 +130,12 @@ public class ItemDTO
                     {
                         if(entry.isSelected())
                         {
-                            cost += entry.getTotalCost(index-1);
+                            tempCost += entry.getTotalCost(index-1);
                         }
                     }
                 }
             }
         }
-        totalCost = cost;
+        totalCost = tempCost;
     }
 }
