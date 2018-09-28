@@ -22,7 +22,7 @@
                             <span class="badge badge-secondary badge-pill" th:text="${entry.quantity}"></span>
                         </td>
                         <td>
-                            <a th:href="'/data/item/edit/' + ${entry.item.id}" th:text="${entry.item.name}"></a>
+                            <a th:href="'/menu/item/edit/' + ${entry.item.id}" th:text="${entry.item.name}"></a>
                         </td>
                         <td class="text-center">
                             <strong th:text="${entry.item.totalCost} + '$'"></strong>

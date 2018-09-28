@@ -5,7 +5,6 @@ import com.athena.entities.Order;
 import com.athena.entities.Product;
 import com.athena.entities.User;
 import com.athena.model.Bucket;
-import com.athena.model.ShoppingCart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

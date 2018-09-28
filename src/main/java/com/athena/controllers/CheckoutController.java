@@ -3,7 +3,7 @@ package com.athena.controllers;
 import com.athena.entities.Order;
 import com.athena.entities.User;
 import com.athena.model.Bucket;
-import com.athena.model.ShoppingCart;
+
 import com.athena.services.OrderService;
 import com.athena.services.UserService;
 
@@ -47,12 +47,12 @@ public class CheckoutController
         initialize();
         cart = (Bucket) request.getSession().getAttribute("shoppingCart");
 
-        //--------------------------------------------------------------------------------------------------------------
-        //TODO: Must be removed
-        Order newOrder = new Order();
-        newOrder.setCart(cart);
-        orderService.insertOrder(newOrder);
-        //--------------------------------------------------------------------------------------------------------------
+//        //--------------------------------------------------------------------------------------------------------------
+//        //TODO: Must be removed
+//        Order newOrder = new Order();
+//        newOrder.setCart(cart);
+//        orderService.insertOrder(newOrder);
+//        //--------------------------------------------------------------------------------------------------------------
 
         model.addAttribute("bucket", cart);
         model.addAttribute("user", new User());
@@ -78,7 +78,7 @@ public class CheckoutController
         currentUser.setAddress(address);
         currentUser.setFloor(floor);
 
-        return "redirect:/checkout";
+        return "redirect:/home";
     }
 
 }

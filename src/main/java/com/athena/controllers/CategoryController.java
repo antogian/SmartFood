@@ -57,30 +57,22 @@ public class CategoryController
             currentItem = menuService.getItemById(allCats, id);
     }
 
-    @RequestMapping("/data")
+    @RequestMapping("/menu")
     public String menu(Model model)
     {
-        try
+        if(allCats == null)
         {
-            if(allCats == null)
-            {
-                initialize();
-            }
-
-            model.addAttribute("allCats", allCats);
-            model.addAttribute("bucket", bucket);
-            model.addAttribute("totalItems", bucket.getEntries().size());
-
-            return "data";
+            initialize();
         }
-        catch(Exception e)
-        {
-            model.addAttribute("message", e.getMessage());
-            return "/error";
-        }
+
+        model.addAttribute("allCats", allCats);
+        model.addAttribute("bucket", bucket);
+        model.addAttribute("totalItems", bucket.getEntries().size());
+
+        return "menu";
     }
 
-    @RequestMapping("/data/item/{id}")
+    @RequestMapping("/menu/item/{id}")
     public String item(@PathVariable("id") String id, Model model)
     {
         checkSelectedItem(id);
@@ -114,7 +106,7 @@ public class CategoryController
         newEntry.setQuantity(quantity);
         bucket.addEntry(newEntry);
 
-        return "redirect:/data";
+        return "redirect:/menu";
     }
 
     @RequestMapping(value="/edit", method=RequestMethod.POST)
@@ -133,10 +125,10 @@ public class CategoryController
         bucket.removeEntryById(id);
         bucket.addEntry(newEntry);
 
-        return "redirect:/data";
+        return "redirect:/menu";
     }
 
-    @RequestMapping("/data/item/edit/{id}")
+    @RequestMapping("/menu/item/edit/{id}")
     public String edit(@PathVariable("id") String id, Model model)
     {
         BucketEntry newEntry = menuService.getEntryFromCart(bucket, id);
@@ -155,7 +147,7 @@ public class CategoryController
     {
         menuService.removeItemById(bucket, id);
 
-        return "redirect:/data";
+        return "redirect:/menu";
     }
 
     @RequestMapping(value="/proceed")
@@ -163,6 +155,6 @@ public class CategoryController
     {
         request.getSession().setAttribute("shoppingCart", bucket);
 
-        return "checkout";
+        return "redirect:/checkout";
     }
 }

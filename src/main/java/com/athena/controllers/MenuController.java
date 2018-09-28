@@ -9,13 +9,10 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Controller
 @Scope("session")
@@ -59,7 +56,7 @@ public class MenuController
             selectedItem = menuService.getItemById(allCats, id);
     }
 
-    @RequestMapping("/menu")
+    @RequestMapping("/catalog")
     public String menu(Model model)
     {
         if(allCats == null)
@@ -73,7 +70,7 @@ public class MenuController
         model.addAttribute("bucket", bucket);
         model.addAttribute("totalItems", bucket.getEntries().size());
 
-        return "menu";
+        return "catalog";
     }
 
     @RequestMapping("/item/{id}")

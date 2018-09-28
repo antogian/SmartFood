@@ -72,7 +72,7 @@
                                     </li>
                                 </ul>
                                 <!-- Tab panes -->
-                                <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-content pre-scrollable" id="nav-tabContent">
                                     <div th:each="modifier, i : ${currentItem.modifiers}" role="tabpanel" class="tab-pane fade"
                                          th:classappend="${i.first} ? 'show active'" th:id="'tab-' + ${i.index} + ${#strings.replace(modifier.name,' ','')}"
                                          th:attr="aria-labelledby='nav-' + ${i.index} + ${#strings.replace(currentItem.name,' ','')}  + '-tab'">
@@ -83,9 +83,8 @@
                                             <input type="checkbox" name="modifiers" class="custom-control-input"
                                                    th:field="*{modifiers[__${i.index}__].entries[__${j.index}__].selected}"
                                             >
-                                            <label class="custom-control-label toggle-qualifiers"
-                                                   th:for="'modifiers' + ${i.index} + '.entries' + ${j.index} + '.selected1'"
-                                                th:text="${entry.name}">
+                                            <label class="custom-control-label toggle-qualifiers" th:for="'modifiers' + ${i.index} + '.entries' + ${j.index} + '.selected1'">
+                                                <b th:text="${entry.name}"></b>
                                             </label>
                                             <div class="reveal-if-active">
                                                 <div class="row">

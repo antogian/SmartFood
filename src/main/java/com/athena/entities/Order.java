@@ -1,7 +1,6 @@
 package com.athena.entities;
 
 import com.athena.model.Bucket;
-import com.athena.model.ShoppingCart;
 
 public class Order
 {

@@ -19,7 +19,7 @@
                 <div class="custom-card-body">
                     <div th:each="item : ${cat.allItems}">
                         <div class="list-group">
-                            <a th:href="'data/item/' + ${item.id}" class="custom-a list-group-item list-group-item-action flex-column align-items-start">
+                            <a th:href="'menu/item/' + ${item.id}" class="custom-a list-group-item list-group-item-action flex-column align-items-start">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1" th:text="${item.name}"></h5>
                                     <small th:text="${item.totalCost} + '$'"></small>

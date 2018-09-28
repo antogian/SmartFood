@@ -9,3 +9,16 @@ body
 {
     padding-top: 54px;
 }
+
+.pre-scrollable
+{
+    max-height: 500px;
+    overflow-y:auto;
+    overflow-x: hidden;
+    direction: rtl;
+}
+
+.tab-pane
+{
+    direction: ltr;
+}
