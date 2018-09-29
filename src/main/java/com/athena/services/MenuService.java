@@ -61,6 +61,7 @@ public class MenuService
         {
             for (ModEntryDTO entry : mod.getEntries())
             {
+                entry.setSelected(false);
                 for(ModEntryDTO selectedEntry : selectedEntries)
                 {
                     if(entry.getName().equalsIgnoreCase(selectedEntry.getName()))

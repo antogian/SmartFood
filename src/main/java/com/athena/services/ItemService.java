@@ -81,6 +81,7 @@ public class ItemService
 
         newItem.setName(item.getName());
         newItem.setIndex(item.getIndex());
+        newItem.setCost(item.getCost());
         newItem.setTotalCost(item.getTotalCost());
         newItem.setFreeModEntries(item.getFreeModEntries());
 

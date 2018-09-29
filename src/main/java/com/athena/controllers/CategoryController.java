@@ -115,11 +115,20 @@ public class CategoryController
                            @RequestParam(value="itemQuantity") int quantity,
                            @RequestParam(value="itemSize", required = false) String sizeName)
     {
-        BucketEntry newEntry = menuService.getEntryFromCart(bucket, id);
+        BucketEntry bucketEntry = menuService.getEntryFromCart(bucket, id);
+        ItemDTO newItem = bucketEntry.getItem();
+        ItemDTO bucketItem = itemService.getItemByValue(newItem);
+        bucketItem.setId(UUID.randomUUID().toString());
 
-        menuService.checkModifiers(newEntry.getItem(), item.getModifiers());
-        newEntry.getItem().calculateTotalCost();
-        menuService.checkSizes(newEntry.getItem(), sizeName);
+        BucketEntry newEntry = new BucketEntry();
+
+        //TODO: Correct no toppings scenario
+        menuService.checkModifiers(bucketItem, item.getModifiers());
+
+        menuService.checkSizes(bucketItem, sizeName);
+        bucketItem.calculateTotalCost();
+
+        newEntry.setItem(bucketItem);
         newEntry.setQuantity(quantity);
 
         bucket.removeEntryById(id);
