@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -69,7 +70,17 @@ public class CategoryController
         model.addAttribute("bucket", shoppingCart);
         model.addAttribute("totalItems", shoppingCart.getEntries().size());
 
+        if(allCats.size() <= 0)
+            model.addAttribute("message", "Cannot parse menu");
+
         return "menu";
+    }
+
+    @ExceptionHandler(Exception.class)
+    public String handleError(Model model, Exception ex, RedirectAttributes redirectAttributes)
+    {
+        redirectAttributes.addFlashAttribute("message", ex.getMessage());
+        return "redirect:/menu";
     }
 
     @RequestMapping("/menu/item/{id}")

@@ -1,18 +1,18 @@
 package com.athena.dao;
 
 import com.athena.entities.Category;
-import com.athena.entities.Item;
-import com.athena.entities.Modifier;
-import com.athena.entities.Size;
+//import com.athena.entities.Item;
+//import com.athena.entities.Modifier;
+//import com.athena.entities.Size;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
-import com.mongodb.MongoClient;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import org.bson.Document;
-import org.bson.codecs.configuration.CodecRegistry;
-import org.bson.codecs.pojo.PojoCodecProvider;
+//import com.mongodb.MongoClient;
+//import com.mongodb.client.MongoCollection;
+//import com.mongodb.client.MongoDatabase;
+//import org.bson.Document;
+//import org.bson.codecs.configuration.CodecRegistry;
+//import org.bson.codecs.pojo.PojoCodecProvider;
 import org.springframework.stereotype.Repository;
 
 import java.io.*;
@@ -20,8 +20,8 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
-import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
+//import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
+//import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
 @Repository
 public class CategoryDAO
