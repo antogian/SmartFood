@@ -33,29 +33,29 @@ public class CategoryDAO
 
     public List<Category> getAllCategories() throws FileNotFoundException
     {
-        Type REVIEW_TYPE = new TypeToken<List<Category>>() {}.getType();
-
-        Gson gson = new Gson();
-
-        ClassLoader classLoader = getClass().getClassLoader();
-        //TODO: Null Pointer exception needs handling
-        File file = new File(classLoader.getResource("data/data.json").getFile());
-
-        JsonReader reader = new JsonReader(new FileReader(file.getPath()));
-        List<Category> allCategories = gson.fromJson(reader, new TypeToken<List<Category>>(){}.getType());
-
-        return allCategories;
-//        List<Category> allCats = getMongoCategories();
-//        if(!allCats.isEmpty())
-//            return allCats;
+//        Type REVIEW_TYPE = new TypeToken<List<Category>>() {}.getType();
 //
 //        Gson gson = new Gson();
+//
 //        ClassLoader classLoader = getClass().getClassLoader();
-//        InputStream in = classLoader.getResourceAsStream("data/data.json");
-//        JsonReader reader = new JsonReader(new InputStreamReader(in));
+//        //TODO: Null Pointer exception needs handling
+//        File file = new File(classLoader.getResource("data/data.json").getFile());
+//
+//        JsonReader reader = new JsonReader(new FileReader(file.getPath()));
 //        List<Category> allCategories = gson.fromJson(reader, new TypeToken<List<Category>>(){}.getType());
 //
 //        return allCategories;
+//        List<Category> allCats = getMongoCategories();
+//        if(!allCats.isEmpty())
+//            return allCats;
+
+        Gson gson = new Gson();
+        ClassLoader classLoader = getClass().getClassLoader();
+        InputStream in = classLoader.getResourceAsStream("data/data.json");
+        JsonReader reader = new JsonReader(new InputStreamReader(in));
+        List<Category> allCategories = gson.fromJson(reader, new TypeToken<List<Category>>(){}.getType());
+
+        return allCategories;
     }
 //
 //    private List<Category> getMongoCategories()
