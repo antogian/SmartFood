@@ -19,7 +19,7 @@ import java.util.List;
 public class MenuController
 {
     private List<CategoryDTO> allCats;
-    private Bucket bucket;
+    private ShoppingCart cart;
     private ItemDTO selectedItem = new ItemDTO();
 
     private CategoryService categoryService;
@@ -36,7 +36,7 @@ public class MenuController
 
     private void initialize()
     {
-        bucket = new Bucket();
+        cart = new ShoppingCart();
         allCats = new ArrayList<>();
         try
         {
@@ -56,22 +56,22 @@ public class MenuController
             selectedItem = menuService.getItemById(allCats, id);
     }
 
-    @RequestMapping("/catalog")
-    public String menu(Model model)
-    {
-        if(allCats == null)
-        {
-            initialize();
-            //populateFeed();
-        }
-
-        model.addAttribute("allCats", allCats);
-        model.addAttribute("selectedItem", selectedItem);
-        model.addAttribute("bucket", bucket);
-        model.addAttribute("totalItems", bucket.getEntries().size());
-
-        return "catalog";
-    }
+//    @RequestMapping("/catalog")
+//    public String menu(Model model)
+//    {
+//        if(allCats == null)
+//        {
+//            initialize();
+//            //populateFeed();
+//        }
+//
+//        model.addAttribute("allCats", allCats);
+//        model.addAttribute("selectedItem", selectedItem);
+//        model.addAttribute("bucket", cart);
+//        model.addAttribute("totalItems", cart.getEntries().size());
+//
+//        return "catalog";
+//    }
 
     @RequestMapping("/item/{id}")
     @ResponseStatus(value = HttpStatus.OK)
@@ -79,7 +79,6 @@ public class MenuController
     {
         checkSelectedItem(id);
         model.asMap().replace("selectedItem", selectedItem);
-//        int x;
 //        return "redirect:/menu";
     }
 

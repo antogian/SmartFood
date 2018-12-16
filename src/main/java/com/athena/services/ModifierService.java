@@ -43,13 +43,13 @@ public class ModifierService
             }
             else
             {
-                allEntries = modEntryService.getModEntries(item.getModifiers().get(i), item.getInclusions()[i]);
+                allEntries = modEntryService.getModEntries(item.getModifiers().get(i), item.getSpecificInclusion(i));
                 modifierDto.setEntries(allEntries);
             }
-            if(item.getRequiredModEntries()[i] > 0 )
+            if(item.getRequiredModEntries().get(i) > 0 )
             {
-                modifierDto.setFreeEntries(item.getFreeModEntries()[i]);
-                modifierDto.setRequiredEntries(item.getRequiredModEntries()[i]);
+                modifierDto.setFreeEntries(item.getFreeModEntries().get(i));
+                modifierDto.setRequiredEntries(item.getRequiredModEntries().get(i));
             }
 
             allModifiers.add(modifierDto);

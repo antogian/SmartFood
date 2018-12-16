@@ -1,15 +1,17 @@
 package com.athena.entities;
 
+import java.util.List;
+
 public class ModEntry
 {
     private String name;
     private int index;
-    private double[] cost;
-    private double[] halfCost;
+    private List<Double> halfCost;
+    private List<Double> cost;
+    private boolean taxable;
 
     public ModEntry()
     {
-        name = "";
     }
 
     public ModEntry(String name)
@@ -37,23 +39,33 @@ public class ModEntry
         this.name = name;
     }
 
-    public double[] getCost()
+    public List<Double> getCost()
     {
         return cost;
     }
 
-    public void setCost(double[] cost)
+    public void setCost(List<Double> cost)
     {
         this.cost = cost;
     }
 
-    public double[] getHalfCost()
+    public List<Double> getHalfCost()
     {
         return halfCost;
     }
 
-    public void setHalfCost(double[] halfCost)
+    public void setHalfCost(List<Double> halfCost)
     {
         this.halfCost = halfCost;
+    }
+
+    public boolean isTaxable()
+    {
+        return taxable;
+    }
+
+    public void setTaxable(boolean taxable)
+    {
+        this.taxable = taxable;
     }
 }

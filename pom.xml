@@ -38,6 +38,12 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+
+
         <!-- -->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -67,8 +73,74 @@
         </dependency>
         <!-- -->
 
+        <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+            <version>3.8.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver</artifactId>
+            <version>3.8.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.8.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-async</artifactId>
+            <version>3.8.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-core</artifactId>
+            <version>3.8.2</version>
+        </dependency>
+
+        <!-- Stripe Dependencies -->
+        <dependency>
+            <groupId>com.stripe</groupId>
+            <artifactId>stripe-java</artifactId>
+            <version>4.2.0</version>
+        </dependency>
+        <!-- End of Stripe Dependencies -->
+
+        <!-- Facebook Dependencies -->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.social</groupId>-->
+            <!--<artifactId>spring-social-facebook</artifactId>-->
+            <!--<version>2.0.3.RELEASE</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.social</groupId>-->
+            <!--<artifactId>spring-social-core</artifactId>-->
+            <!--<version>1.1.6.RELEASE</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.social</groupId>-->
+            <!--<artifactId>spring-social-config</artifactId>-->
+            <!--<version>2.0.0.M2</version>-->
+        <!--</dependency>-->
+        <!-- End of Facebook Integration -->
+
+        <!-- Google Dependencies -->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.security.oauth</groupId>-->
+            <!--<artifactId>spring-security-oauth2</artifactId>-->
+            <!--<version>2.3.4.RELEASE</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-security</artifactId>-->
+            <!--<version>2.0.1.RELEASE</version>-->
+        <!--</dependency>-->
+        <!-- End of Google Dependencies -->
 
     </dependencies>
+
 
     <build>
         <plugins>

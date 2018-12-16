@@ -20,7 +20,7 @@ import java.util.UUID;
 public class CategoryController
 {
     private List<CategoryDTO> allCats;
-    private Bucket bucket;
+    private ShoppingCart shoppingCart;
     private ItemDTO currentItem = new ItemDTO();
 
     private CategoryService categoryService;
@@ -37,7 +37,7 @@ public class CategoryController
 
     private void initialize()
     {
-        bucket = new Bucket();
+        shoppingCart = new ShoppingCart();
         allCats = new ArrayList<>();
         try
         {
@@ -57,7 +57,7 @@ public class CategoryController
             currentItem = menuService.getItemById(allCats, id);
     }
 
-    @RequestMapping("/menu")
+    @GetMapping("/menu")
     public String menu(Model model)
     {
         if(allCats == null)
@@ -66,8 +66,8 @@ public class CategoryController
         }
 
         model.addAttribute("allCats", allCats);
-        model.addAttribute("bucket", bucket);
-        model.addAttribute("totalItems", bucket.getEntries().size());
+        model.addAttribute("bucket", shoppingCart);
+        model.addAttribute("totalItems", shoppingCart.getEntries().size());
 
         return "menu";
     }
@@ -76,8 +76,8 @@ public class CategoryController
     public String item(@PathVariable("id") String id, Model model)
     {
         checkSelectedItem(id);
-        model.addAttribute("bucket", bucket);
-        model.addAttribute("totalItems", bucket.getEntries().size());
+        model.addAttribute("bucket", shoppingCart);
+        model.addAttribute("totalItems", shoppingCart.getEntries().size());
         model.addAttribute("currentItem", currentItem);
         model.addAttribute("modifiers", currentItem.getModifiers());
 
@@ -104,7 +104,7 @@ public class CategoryController
 
         newEntry.setItem(bucketItem);
         newEntry.setQuantity(quantity);
-        bucket.addEntry(newEntry);
+        shoppingCart.addEntry(newEntry);
 
         return "redirect:/menu";
     }
@@ -115,7 +115,7 @@ public class CategoryController
                            @RequestParam(value="itemQuantity") int quantity,
                            @RequestParam(value="itemSize", required = false) String sizeName)
     {
-        BucketEntry bucketEntry = menuService.getEntryFromCart(bucket, id);
+        BucketEntry bucketEntry = menuService.getEntryFromCart(shoppingCart, id);
         ItemDTO newItem = bucketEntry.getItem();
         ItemDTO bucketItem = itemService.getItemByValue(newItem);
         bucketItem.setId(UUID.randomUUID().toString());
@@ -131,8 +131,8 @@ public class CategoryController
         newEntry.setItem(bucketItem);
         newEntry.setQuantity(quantity);
 
-        bucket.removeEntryById(id);
-        bucket.addEntry(newEntry);
+        shoppingCart.removeEntryById(id);
+        shoppingCart.addEntry(newEntry);
 
         return "redirect:/menu";
     }
@@ -140,11 +140,11 @@ public class CategoryController
     @RequestMapping("/menu/item/edit/{id}")
     public String edit(@PathVariable("id") String id, Model model)
     {
-        BucketEntry newEntry = menuService.getEntryFromCart(bucket, id);
+        BucketEntry newEntry = menuService.getEntryFromCart(shoppingCart, id);
         currentItem = newEntry.getItem();
         //TODO: Quantity isn't initiated.
-        model.addAttribute("bucket", bucket);
-        model.addAttribute("totalItems", bucket.getEntries().size());
+        model.addAttribute("bucket", shoppingCart);
+        model.addAttribute("totalItems", shoppingCart.getEntries().size());
         model.addAttribute("currentItem", currentItem);
         model.addAttribute("modifiers", currentItem.getModifiers());
 
@@ -154,7 +154,7 @@ public class CategoryController
     @RequestMapping({"/delete"})
     public String removeItem(@RequestParam(value = "item") String id)
     {
-        menuService.removeItemById(bucket, id);
+        menuService.removeItemById(shoppingCart, id);
 
         return "redirect:/menu";
     }
@@ -162,7 +162,7 @@ public class CategoryController
     @RequestMapping(value="/proceed")
     public String checkout(HttpServletRequest request)
     {
-        request.getSession().setAttribute("shoppingCart", bucket);
+        request.getSession().setAttribute("shoppingCart", shoppingCart);
 
         return "redirect:/checkout";
     }

@@ -41,9 +41,9 @@ public class MenuService
         return new ItemDTO();
     }
 
-    public void removeItemById(Bucket bucket, String name)
+    public void removeItemById(ShoppingCart shoppingCart, String name)
     {
-        bucket.removeEntryById(name);
+        shoppingCart.removeEntryById(name);
     }
 
     public void checkModifiers(ItemDTO item, List<ModifierDTO> modifiers)
@@ -89,9 +89,9 @@ public class MenuService
         }
     }
 
-    public BucketEntry getEntryFromCart(Bucket bucket, String id)
+    public BucketEntry getEntryFromCart(ShoppingCart shoppingCart, String id)
     {
-        for (BucketEntry entry : bucket.getEntries())
+        for (BucketEntry entry : shoppingCart.getEntries())
         {
             if(id.equalsIgnoreCase(entry.getItem().getId()))
             {

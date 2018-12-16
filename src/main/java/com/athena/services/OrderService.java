@@ -4,7 +4,7 @@ import com.athena.dao.ProductDAO;
 import com.athena.entities.Order;
 import com.athena.entities.Product;
 import com.athena.entities.User;
-import com.athena.model.Bucket;
+import com.athena.model.ShoppingCart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +34,7 @@ public class OrderService
         return allProducts;
     }
 
-    public void setOrderInfo(User currentUser, Bucket cart)
+    public void setOrderInfo(User currentUser, ShoppingCart cart)
     {
         Order newOrder = new Order();
         newOrder.setUser(currentUser);

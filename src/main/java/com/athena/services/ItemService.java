@@ -36,7 +36,7 @@ public class ItemService
             itemDto.setName(item.getName());
             itemDto.setId(UUID.randomUUID().toString());
             itemDto.setIndex(item.getIndex());
-            itemDto.setFreeModEntries(item.getFreeModEntries());
+            itemDto.setFreeModEntries(item.getFreeModEntries().stream().mapToInt(i -> i).toArray());
             //----------------------------------------------------------------------------------------------------------
 
             //----------------------------------------------------------------------------------------------------------
@@ -50,14 +50,15 @@ public class ItemService
                 allSizes = sizeService.getSizes(item.getSize());
                 for(int i = 0; i < allSizes.size(); i++)
                 {
-                    allSizes.get(i).setCost(item.getCost()[i]);
+                    allSizes.get(i).setCost(item.getCost().get(i));
                 }
                 allSizes.get(0).setSelected(true);
 
                 itemDto.setAllSizes(allSizes);
             }
-            itemDto.setCost(item.getCost()[0]);
-            itemDto.setTotalCost(item.getCost()[0]);
+
+            itemDto.setCost(item.getCost().get(0));
+            itemDto.setTotalCost(item.getCost().get(0));
             //----------------------------------------------------------------------------------------------------------
             List<ModifierDTO> allModifiers = new ArrayList<>();
             if(item.getModifiers() == null || item.getModifiers().isEmpty())

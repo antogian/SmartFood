@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class ModEntryService
 {
-    public List<ModEntryDTO> getModEntries(Modifier modifier, int[] inclusions)
+    public List<ModEntryDTO> getModEntries(Modifier modifier, List<Integer> inclusions)
     {
         List<ModEntryDTO> allEntries = new ArrayList<>();
 
@@ -29,9 +29,10 @@ public class ModEntryService
             else
             {
                 double[] cost = new double[5];
-                for(int i=0; i<modEntry.getCost().length; i++)
+                for(int i=0; i<modEntry.getCost().size(); i++)
                 {
-                    cost[i] = modEntry.getCost()[i];
+                    if(!(modEntry.getCost().get(i) == null))
+                        cost[i] = modEntry.getCost().get(i);
                 }
                 entryDto.setCost(cost);
             }
@@ -43,9 +44,10 @@ public class ModEntryService
                 else
                 {
                     double[] halfCost = new double[5];
-                    for(int i=0; i<modEntry.getHalfCost().length; i++)
+                    for(int i=0; i<modEntry.getHalfCost().size(); i++)
                     {
-                        halfCost[i] = modEntry.getHalfCost()[i];
+                        if(!(modEntry.getHalfCost().get(i) == null))
+                        halfCost[i] = modEntry.getHalfCost().get(i);
                     }
                     entryDto.setHalfCost(halfCost);
                 }
@@ -57,11 +59,11 @@ public class ModEntryService
         return allEntries;
     }
 
-    private boolean getInclusion(int index, int[] inclusions)
+    private boolean getInclusion(int index, List<Integer> inclusions)
     {
-        for(int i=0; i<inclusions.length; i++)
+        for(int i=0; i<inclusions.size(); i++)
         {
-            if(inclusions[i] == index)
+            if(inclusions.get(i) == index)
             {
                 return true;
             }

@@ -10,12 +10,12 @@ import java.util.List;
 
 @Component
 @Scope("session")
-public class Bucket
+public class ShoppingCart
 {
     private List<BucketEntry> entries;
     private double totalCost;
 
-    public Bucket()
+    public ShoppingCart()
     {
         entries = new ArrayList<>();
     }

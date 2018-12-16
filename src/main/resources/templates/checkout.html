@@ -12,29 +12,45 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">ATHENA</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item disabled">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/menu">Menu</a>
+                    </li>
+                    <li class="nav-item disabled">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/menu">Menu
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Contact</a>
-                    </li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Login
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Continue with Facebook</a>
+                            <a class="dropdown-item" href="#">Continue with Google</a>
+                        </div>
+                    </div>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Container -->
     <div class="container">
+        <div th:if="${message != null}">
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <strong th:text="${message}"></strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
         <div class="py-5 text-center">
             <h2>Finalize Order</h2>
             <p class="lead">You need to fill your information in order to place your order.</p>
@@ -48,7 +64,7 @@
             <div class="col-md-8 order-md-1">
                 <h4 class="mb-3">Contact Info</h4>
                 <hr>
-                <form class="needs-validation" action="/processOrder" th:action="@{/processOrder}" method="post" novalidate>
+                <form class="needs-validation" th:action="@{/charge}" method="post">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="firstName">First name</label>
@@ -69,14 +85,14 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="you@email.com" name="email">
+                            <input type="email" class="form-control" id="email" placeholder="you@email.com" name="email" required>
                             <div class="invalid-feedback">
                                 Please enter a valid email address for shipping updates.
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="telephone" name="phone">
+                            <input type="tel" class="form-control" id="phone" placeholder="telephone" name="phone" required>
                             <div class="invalid-feedback">
                                 Please enter a valid phone number for shipping updates.
                             </div>
@@ -103,14 +119,14 @@
                             <div class="form-group">
                                 <label for="inputAddress1">Address</label>
                                 <input type="text" class="form-control" id="inputAddress1"
-                                       placeholder="1234 Main St" name="address">
+                                       placeholder="1234 Main St" name="address" required>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label for="inputFloor1">Floor</label>
                                 <input type="number" class="form-control" id="inputFloor1" value="0" min="0"
-                                       placeholder="Floor" name="floor">
+                                       placeholder="Floor" name="floor" required>
                             </div>
                         </div>
                     </div>
@@ -118,12 +134,29 @@
                     <hr class="mb-4">
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="save-info">
-                        <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                        <label class="custom-control-label" for="save-info">Remember</label>
                     </div>
-                    <hr class="mb-4">
+                    <!--<hr class="mb-4">-->
 
-                    <h4 class="mb-3">Payment</h4>
+                    <!--<h4 class="mb-3">Payment</h4>-->
                     <hr class="mb-4">
+                        <input type='hidden' value="50" name='amount' />
+                        <!-- NOTE: data-key/data-amount/data-currency will be rendered by Thymeleaf -->
+                        <script
+                                src='https://checkout.stripe.com/checkout.js'
+                                class='stripe-button'
+                                th:attr='data-key=${stripePublicKey}, data-amount=${amount}, data-currency=${currency}'
+                                data-name='ATHENA'
+                                data-description=''
+                                data-locale='auto'
+                                data-label="Place Order">
+                        </script>
+                        <script>
+                            // Hide default stripe button, be careful there if you
+                            // have more than 1 button of that class
+                            document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+                        </script>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Place Order</button>
 
                     <!--
                     <div class="d-block my-3">
@@ -177,8 +210,8 @@
                         </div>
                     </div>
                     -->
-                    <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Place Order</button>
+                    <!--<hr class="mb-4">-->
+                    <!--<button class="btn btn-primary btn-lg btn-block" type="submit">Place Order</button>-->
                 </form>
             </div>
         </div>
