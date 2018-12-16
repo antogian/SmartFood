@@ -30,7 +30,7 @@ public class OrderService
     public List<Product> selectAllOrders()
     {
         List<Product> allProducts = new ArrayList<>();
-        allProducts = productDAO.selectAllProducts();
+        //allProducts = productDAO.selectAllProducts();
         return allProducts;
     }
 
