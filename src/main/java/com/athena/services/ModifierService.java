@@ -43,7 +43,7 @@ public class ModifierService
             }
             else
             {
-                allEntries = modEntryService.getModEntries(item.getModifiers().get(i), item.getSpecificInclusion(i));
+                allEntries = modEntryService.getModEntries(item.getModifiers().get(i), item.getSpecificInclusion(i+1));
                 modifierDto.setEntries(allEntries);
             }
             if(item.getRequiredModEntries().get(i) > 0 )

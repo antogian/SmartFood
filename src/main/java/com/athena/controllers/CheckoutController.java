@@ -100,7 +100,7 @@ public class CheckoutController
 //        model.addAttribute("balance_transaction", charge.getBalanceTransaction());
         redirectAttributes.addFlashAttribute("message", "Order Completed Successfully.");
 
-        return "redirect:/checkout";
+        return "redirect:/menu";
     }
 
     @ExceptionHandler(StripeException.class)

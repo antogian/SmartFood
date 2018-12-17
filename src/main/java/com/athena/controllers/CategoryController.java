@@ -59,12 +59,15 @@ public class CategoryController
     }
 
     @GetMapping("/menu")
-    public String menu(Model model)
+    public String menu(Model model, RedirectAttributes redirectAttributes)
     {
         if(allCats == null)
         {
             initialize();
         }
+
+        if(model.containsAttribute("message"))
+            shoppingCart = new ShoppingCart();
 
         model.addAttribute("allCats", allCats);
         model.addAttribute("bucket", shoppingCart);
