@@ -20,13 +20,7 @@ public class HomeController
         return "home";
     }
 
-//    @RequestMapping("/login")
-//    public String logIn()
-//    {
-//        //HttpSession session = request.getSession();
-//
-//        return "login";
-//    }
+
 
 //    @RequestMapping("/register")
 //    public String register()
