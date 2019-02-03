@@ -95,8 +95,8 @@ public class ModEntryDTO
     public void setHalfOption(String halfOption)
     {
         if(halfOption.equalsIgnoreCase("Full") ||
-                halfOption.equalsIgnoreCase("First") ||
-                halfOption.equalsIgnoreCase("Second"))
+                halfOption.equalsIgnoreCase("F1/2") ||
+                halfOption.equalsIgnoreCase("S1/2"))
         this.halfOption = halfOption;
     }
 

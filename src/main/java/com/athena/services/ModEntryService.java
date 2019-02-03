@@ -95,6 +95,7 @@ public class ModEntryService
 
         newEntry.setIndex(modEntry.getIndex());
         newEntry.setSelected(modEntry.isSelected());
+        newEntry.setIncluded(modEntry.isIncluded());
 
         return newEntry;
     }

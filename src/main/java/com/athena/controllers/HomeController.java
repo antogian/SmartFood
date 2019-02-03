@@ -20,7 +20,14 @@ public class HomeController
         return "home";
     }
 
+    @GetMapping("/menu-dev")
+    public String menuProd(HttpServletRequest request)
+    {
+        //HttpSession session = request.getSession();
+        request.getSession().removeAttribute("shoppingCart");
 
+        return "menu-prod";
+    }
 
 //    @RequestMapping("/register")
 //    public String register()

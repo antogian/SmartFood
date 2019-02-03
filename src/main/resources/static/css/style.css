@@ -10,6 +10,23 @@ body
     padding-top: 54px;
 }
 
+#cart-area-empty
+{
+    padding: 0 7px 0 7px;
+    border-radius: 30px;
+}
+
+#cart-area-full
+{
+    padding: 0 7px 0 7px;
+    border-radius: 30px;
+}
+
+img
+{
+    max-width: none;
+}
+
 .pre-scrollable
 {
     max-height: 500px;

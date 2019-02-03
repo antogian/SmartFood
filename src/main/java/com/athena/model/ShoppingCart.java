@@ -12,7 +12,7 @@ import java.util.List;
 @Scope("session")
 public class ShoppingCart
 {
-    private List<BucketEntry> entries;
+    private List<CartEntry> entries;
     private double totalCost;
 
     public ShoppingCart()
@@ -20,12 +20,12 @@ public class ShoppingCart
         entries = new ArrayList<>();
     }
 
-    public List<BucketEntry> getEntries()
+    public List<CartEntry> getEntries()
     {
         return entries;
     }
 
-    public void setEntries(List<BucketEntry> entries)
+    public void setEntries(List<CartEntry> entries)
     {
         this.entries = entries;
     }
@@ -48,13 +48,13 @@ public class ShoppingCart
     private void calculateCost()
     {
         totalCost = 0.0;
-        for(BucketEntry entry : entries)
+        for(CartEntry entry : entries)
         {
             totalCost += entry.getQuantity() * entry.getItem().getTotalCost();
         }
     }
 
-    public void addEntry(BucketEntry newEntry)
+    public void addEntry(CartEntry newEntry)
     {
         entries.add(newEntry);
         calculateCost();

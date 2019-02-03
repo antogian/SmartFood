@@ -156,7 +156,7 @@
 
                     <!--<h4 class="mb-3">Payment</h4>-->
                     <hr class="mb-4">
-                        <input type='hidden' value="50" name='amount' />
+                        <input type='hidden' th:value="${amount}" name='amount' />
                         <!-- NOTE: data-key/data-amount/data-currency will be rendered by Thymeleaf -->
                         <script
                                 src='https://checkout.stripe.com/checkout.js'

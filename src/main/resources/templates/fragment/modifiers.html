@@ -57,7 +57,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="col-12">
                         <div th:if="${not #lists.isEmpty(currentItem.modifiers)}">
                             <div class="tab" role="tabpanel">
                                 <!-- Nav tabs -->
@@ -94,11 +94,11 @@
                                                             <label class="custom-control-label" th:for="'modifiers' + ${i.index} + '.entries' + ${j.index} + '.halfOption1'">Full</label>
                                                         </div>
                                                         <div class="custom-control custom-radio">
-                                                            <input type="radio" class="custom-control-input" th:field="*{modifiers[__${i.index}__].entries[__${j.index}__].halfOption}" th:value="First">
+                                                            <input type="radio" class="custom-control-input" th:field="*{modifiers[__${i.index}__].entries[__${j.index}__].halfOption}" th:value="'F1/2'">
                                                             <label class="custom-control-label" th:for="'modifiers' + ${i.index} + '.entries' + ${j.index} + '.halfOption2'">1st Half</label>
                                                         </div>
                                                         <div class="custom-control custom-radio">
-                                                            <input type="radio" class="custom-control-input" th:field="*{modifiers[__${i.index}__].entries[__${j.index}__].halfOption}" th:value="Second">
+                                                            <input type="radio" class="custom-control-input" th:field="*{modifiers[__${i.index}__].entries[__${j.index}__].halfOption}" th:value="'S1/2'">
                                                             <label class="custom-control-label" th:for="'modifiers' + ${i.index} + '.entries' + ${j.index} + '.halfOption3'">2nd Half</label>
                                                         </div>
                                                     </div>

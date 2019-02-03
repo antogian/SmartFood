@@ -1,5 +1,6 @@
 package com.athena.controllers;
 
+import com.athena.entities.Order;
 import com.athena.entities.User;
 import com.athena.model.ShoppingCart;
 
@@ -70,7 +71,7 @@ public class CheckoutController
 
         model.addAttribute("bucket", cart);
         model.addAttribute("user", new User());
-        model.addAttribute("amount", cart.getTotalCost() * 100); // in cents
+        model.addAttribute("amount", (int) cart.getTotalCost() * 100); // in cents
         model.addAttribute("stripePublicKey", stripePublicKey);
         model.addAttribute("currency", ChargeRequest.Currency.USD);
 
@@ -93,11 +94,30 @@ public class CheckoutController
     {
         //chargeRequest.setDescription("Example charge");
         chargeRequest.setCurrency(ChargeRequest.Currency.USD);
+        //chargeRequest.setAmount((int)cart.getTotalCost() * 100);
         Charge charge = stripeService.charge(chargeRequest);
 //        model.addAttribute("id", charge.getId());
 //        model.addAttribute("status", charge.getStatus());
 //        model.addAttribute("chargeId", charge.getId());
 //        model.addAttribute("balance_transaction", charge.getBalanceTransaction());
+
+        currentUser.setFirstName(firstName);
+        currentUser.setLastName(lastName);
+        currentUser.setEmail(email);
+        currentUser.setPhoneNumber(phoneNumber);
+        currentUser.setCity(city);
+        currentUser.setState(state);
+        currentUser.setZip(zip);
+        currentUser.setAddress(address);
+        currentUser.setFloor(floor);
+
+        Order order = new Order();
+        order.setCart(cart);
+        order.setUser(currentUser);
+        order.setPaid(charge.getPaid());
+
+        orderService.insertOrder(order);
+
         redirectAttributes.addFlashAttribute("message", "Order Completed Successfully.");
 
         return "redirect:/menu";

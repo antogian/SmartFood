@@ -1,37 +1,33 @@
 package com.athena.services;
 
-import com.athena.dao.ProductDAO;
+import com.athena.dao.OrderDAO;
 import com.athena.entities.Order;
-import com.athena.entities.Product;
 import com.athena.entities.User;
 import com.athena.model.ShoppingCart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class OrderService
 {
+    private OrderDAO orderDAO;
+
     @Autowired
-    ProductDAO productDAO;
-
-    public OrderService()
+    public OrderService(OrderDAO orderDAO)
     {
-
+        this.orderDAO = orderDAO;
     }
 
     public void insertOrder(Order newOrder)
     {
-        //productDAO.insertProducts(newOrder.getCart().getSelectedProducts());
+        orderDAO.insertOrder(newOrder);
     }
 
-    public List<Product> selectAllOrders()
+    public List<Order> getAllOrders()
     {
-        List<Product> allProducts = new ArrayList<>();
-        //allProducts = productDAO.selectAllProducts();
-        return allProducts;
+        return orderDAO.getAllOrders();
     }
 
     public void setOrderInfo(User currentUser, ShoppingCart cart)

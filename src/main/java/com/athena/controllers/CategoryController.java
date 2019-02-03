@@ -105,18 +105,18 @@ public class CategoryController
                                 @RequestParam(value="itemSize", required = false) String sizeName)
     {
         ItemDTO newItem = menuService.getItemById(allCats, id);
-        ItemDTO bucketItem = itemService.getItemByValue(newItem);
-        bucketItem.setId(UUID.randomUUID().toString());
+        ItemDTO cartItem = itemService.getItemByValue(newItem);
+        cartItem.setId(UUID.randomUUID().toString());
 
-        BucketEntry newEntry = new BucketEntry();
+        CartEntry newEntry = new CartEntry();
 
         //TODO: Correct no toppings scenario
-        menuService.checkModifiers(bucketItem, item.getModifiers());
+        menuService.checkModifiers(cartItem, item.getModifiers());
 
-        menuService.checkSizes(bucketItem, sizeName);
-        bucketItem.calculateTotalCost();
+        menuService.checkSizes(cartItem, sizeName);
+        cartItem.calculateTotalCost();
 
-        newEntry.setItem(bucketItem);
+        newEntry.setItem(cartItem);
         newEntry.setQuantity(quantity);
         shoppingCart.addEntry(newEntry);
 
@@ -129,20 +129,20 @@ public class CategoryController
                            @RequestParam(value="itemQuantity") int quantity,
                            @RequestParam(value="itemSize", required = false) String sizeName)
     {
-        BucketEntry bucketEntry = menuService.getEntryFromCart(shoppingCart, id);
+        CartEntry bucketEntry = menuService.getEntryFromCart(shoppingCart, id);
         ItemDTO newItem = bucketEntry.getItem();
-        ItemDTO bucketItem = itemService.getItemByValue(newItem);
-        bucketItem.setId(UUID.randomUUID().toString());
+        ItemDTO cartItem = itemService.getItemByValue(newItem);
+        cartItem.setId(UUID.randomUUID().toString());
 
-        BucketEntry newEntry = new BucketEntry();
+        CartEntry newEntry = new CartEntry();
 
         //TODO: Correct no toppings scenario
-        menuService.checkModifiers(bucketItem, item.getModifiers());
+        menuService.checkModifiers(cartItem, item.getModifiers());
 
-        menuService.checkSizes(bucketItem, sizeName);
-        bucketItem.calculateTotalCost();
+        menuService.checkSizes(cartItem, sizeName);
+        cartItem.calculateTotalCost();
 
-        newEntry.setItem(bucketItem);
+        newEntry.setItem(cartItem);
         newEntry.setQuantity(quantity);
 
         shoppingCart.removeEntryById(id);
@@ -154,7 +154,7 @@ public class CategoryController
     @RequestMapping("/menu/item/edit/{id}")
     public String edit(@PathVariable("id") String id, Model model)
     {
-        BucketEntry newEntry = menuService.getEntryFromCart(shoppingCart, id);
+        CartEntry newEntry = menuService.getEntryFromCart(shoppingCart, id);
         currentItem = newEntry.getItem();
         //TODO: Quantity isn't initiated.
         model.addAttribute("bucket", shoppingCart);

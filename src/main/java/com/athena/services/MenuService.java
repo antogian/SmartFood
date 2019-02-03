@@ -1,7 +1,5 @@
 package com.athena.services;
 
-import com.athena.dao.MenuDAO;
-import com.athena.entities.Menu;
 import com.athena.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,18 +10,12 @@ import java.util.List;
 @Service
 public class MenuService
 {
-    private MenuDAO menuDao;
     private CategoryService categoryService;
 
     @Autowired
     public MenuService(CategoryService categoryService)
     {
         this.categoryService = categoryService;
-    }
-
-    public List<Menu> getAllMenus()
-    {
-        return menuDao.getAllMenus();
     }
 
     public ItemDTO getItemById(List<CategoryDTO> allCats, String id)
@@ -89,16 +81,16 @@ public class MenuService
         }
     }
 
-    public BucketEntry getEntryFromCart(ShoppingCart shoppingCart, String id)
+    public CartEntry getEntryFromCart(ShoppingCart shoppingCart, String id)
     {
-        for (BucketEntry entry : shoppingCart.getEntries())
+        for (CartEntry entry : shoppingCart.getEntries())
         {
             if(id.equalsIgnoreCase(entry.getItem().getId()))
             {
                 return entry;
             }
         }
-        return new BucketEntry();
+        return new CartEntry();
     }
 
 

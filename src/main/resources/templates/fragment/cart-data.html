@@ -37,15 +37,17 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-        <div class="card-footer bg-light">
-            <h6 class="text-center">Total</h6>
+            <div class="bg-secondary">
+                <div class="cart-total">
+                    <h5>
+                        Total: &nbsp; <span th:text="${bucket.totalCost} + '$'"></span>
+                    </h5>
 
-            <h5 class="text-center" th:text="${bucket.totalCost} + '$'"></h5>
-
+                </div>
+            </div>
         </div>
-        <div class="card-footer bg-info">
-            <a class="btn btn-block btn-info" href="/proceed"> PROCEED TO CHECKOUT </a>
+        <div class="card-footer bg-info text-center">
+            <a class="btn btn-block btn-info" href="/proceed"> CHECKOUT </a>
         </div>
     </div>
 </div>

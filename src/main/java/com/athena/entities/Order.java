@@ -6,6 +6,7 @@ public class Order
 {
     private User user;
     private ShoppingCart cart;
+    private boolean paid;
 
     public Order()
     {
@@ -31,5 +32,15 @@ public class Order
     public void setCart(ShoppingCart cart)
     {
         this.cart = cart;
+    }
+
+    public boolean isPaid()
+    {
+        return paid;
+    }
+
+    public void setPaid(boolean paid)
+    {
+        this.paid = paid;
     }
 }

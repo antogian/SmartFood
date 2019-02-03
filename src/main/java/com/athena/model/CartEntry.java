@@ -6,12 +6,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("session")
-public class BucketEntry
+public class CartEntry
 {
     private int quantity = 1;
     private ItemDTO item;
 
-    public BucketEntry()
+    public CartEntry()
     {
         item = new ItemDTO();
         quantity = 1;
